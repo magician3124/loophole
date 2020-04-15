@@ -41,3 +41,49 @@ body, html {
     font-family: 'exo';
     font-size: 20px;
 }
+
+.droplist {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dropbtn {
+    background-color: #2086B9;
+    color: white;
+    margin: 5px;
+    padding: 20px 150px 20px 150px;
+    font-size: 16px;
+    font-family: 'exo';
+    border: none;
+}
+
+.dropdown {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  broder: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 340px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'exo';
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #19678E;}
