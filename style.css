@@ -91,9 +91,29 @@ body, html {
 
 .dropdown:hover .dropbtn {background-color: #374166;}
 
-.post{
+.recentpost{
     display: block;
-    background-color:
+    background-color: inherit;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-width: 3px;
+    border-color: #35D3A5;
+    border-style: solid;
+    height: 40px;
+    padding: 60px 60px 120px 60px;
+}
+
+.recentpost h1{
+    font-family: 'exo';
+    font-size: 24px;
+    color: white;
+}
+
+.recentpost h2{
+    font-family: 'exo';
+    font-size: 24px;
+    color: orange;
 }
 
 .wrapper{
@@ -149,27 +169,6 @@ body, html {
   color: #fff;
 }
 
-.wrapper .sidebar .social_media{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.wrapper .sidebar .social_media a{
-  display: block;
-  width: 40px;
-  background: #594f8d;
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: #bdb8d7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
 .wrapper .main_content{
   width: 100%;
   margin-left: 100px;
@@ -190,10 +189,4 @@ body, html {
 
 .wrapper .main_content .info div{
   margin-bottom: 20px;
-}
-
-@media (max-height: 500px){
-  .social_media{
-    display: none !important;
-  }
 }
