@@ -112,9 +112,15 @@ body, html {
 
 .post {
     display: block;
+    background-color: inherit;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-width: 3px;
     border-style: solid;
     border-color: #35D3A5;
     border-width: 3px;
+    height: 60px;
 }
 
 .post p {
