@@ -110,6 +110,17 @@ body, html {
     text-decoration: none;
 }
 
+.post {
+    display: block;
+    border-style: solid;
+    border-color: #35D3A5;
+    border-width: 3px;
+}
+
+.post p {
+    color: white;
+}
+
 #title{
     color: white;
 }
