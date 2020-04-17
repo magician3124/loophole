@@ -120,7 +120,14 @@ body, html {
     height: 60px;
 }
 
+.post h1 {
+    color: orange;
+    font-size: 30px;
+    font-family: 'exo';
+}
+
 .post p {
+    font-size: 12px;
     color: white;
     font-family: 'exo';
 }
