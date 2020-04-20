@@ -1,7 +1,12 @@
 body, html {
     height: 100%;
     margin: 0;
-    background-color: #07090F;
+    /* background-color: #07090F; */
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 @font-face {
@@ -48,6 +53,7 @@ body, html {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: #07090F;
 }
 
 .dropbtn {
@@ -91,54 +97,45 @@ body, html {
 
 .dropdown:hover .dropbtn {background-color: #374166;}
 
-.recentpost{
-    display: block;
-    background-color: inherit;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-width: 3px;
-    border-color: #35D3A5;
-    border-style: solid;
-    height: 40px;
-    padding: 30px 60px 120px 60px;
+.post-container {
+    display: inline-flex;
+    flex-direction: row;
+    height: 300px;
+    padding: 15px;
 }
 
-.recentpost h1 a{
-    font-family: 'exo';
-    font-size: 24px;
+.post-item {
+    flex: 1;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.post {
-    display: block;
-    background-color: inherit;
-    margin: 5%;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #35D3A5;
-    border-width: 3px;
-    height: 60px;
-}
-
-.post h1 {
-    color: orange;
-    font-size: 30px;
-    font-family: 'exo';
-}
-
-.post p {
-    font-size: 12px;
+.post-item h1 {
+    display: flex;
     color: white;
+    font-size: 40px;
+    text-align: center;
     font-family: 'exo';
 }
 
-#title{
-    color: white;
+.hashtag {
+    display: flex;
+    color: orange;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'exo';
 }
 
-#category{
-    color: orange;
-    text-decoration: none;
+#item-1{
+    width: 500px;
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("image/osi-model.jpg");
+    background-position: center;
+    background-size: 500px;
+    background-repeat: no-repeat;
 }
 
 .wrapper{
