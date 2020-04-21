@@ -147,6 +147,10 @@ a {
     background-repeat: no-repeat;
 }
 
+.post {
+    
+}
+
 .wrapper{
   display: flex;
   position: relative;
