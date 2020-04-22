@@ -47,6 +47,7 @@ a {
 .hero-text p {
     font-family: 'exo';
     font-size: 20px;
+    color: orange;
 }
 
 .droplist {

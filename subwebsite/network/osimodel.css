@@ -1,4 +1,7 @@
 @import url("http://loophole.nctu.me/style.css");
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.nctu.me/image/osi-model.jpg");
+}
 .post {
     margin-left: 20px;
 }
