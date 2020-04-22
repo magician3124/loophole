@@ -11,5 +11,4 @@ document.write(`
             <li><a href="#"><i class="fas fa-map-pin"></i></a></li> -->
         </ul>
     </div>
-
 `);
