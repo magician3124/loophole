@@ -1,0 +1,12 @@
+@import url("http://loophole.nctu.me/style.css");
+.post {
+    margin-left: 20px;
+}
+
+.post h1 {
+    font-size: 40px;
+}
+
+.post a {
+    font-size: 20px;
+}

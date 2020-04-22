@@ -147,18 +147,6 @@ a {
     background-repeat: no-repeat;
 }
 
-.post {
-    margin-left: 20px;
-}
-
-.post h1 {
-    font-size: 40px;
-}
-
-.post a {
-    font-size: 20px;
-}
-
 .wrapper{
   display: flex;
   position: relative;
