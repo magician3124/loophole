@@ -63,7 +63,7 @@ a {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #DC82F0;
+    background-color: #07090F;
 }
 
 .menu li{
@@ -81,7 +81,7 @@ a {
 }
 
 .menu li a:hover {
-  color: #C366D8;
+  color: #DC82F0;
 }
 
 /* .dropdown:hover .dropbtn {background-color: #374166;} */
