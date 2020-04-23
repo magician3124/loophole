@@ -81,7 +81,8 @@ a {
 }
 
 .menu li a:hover {
-  color: #DC82F0;
+    -webkit-transition: color ease-in-out 200ms;
+    color: #DC82F0;
 }
 
 /* .dropdown:hover .dropbtn {background-color: #374166;} */
