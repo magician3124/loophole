@@ -66,7 +66,7 @@ a {
 }
 
 .dropbtn {
-    background-color: #1F253B;
+    background-color: inherit;
     color: white;
     margin: 5px;
     padding: 20px 100px 20px 100px;
@@ -105,7 +105,7 @@ a {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #374166;}
+/* .dropdown:hover .dropbtn {background-color: #374166;} */
 
 .post-container {
     display: inline-flex;
