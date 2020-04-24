@@ -33,8 +33,51 @@
 
 .post p {
     line-height: 30px;
+    font-size: 18px;
 }
 
-.post a {
-    font-size: 25px;
+.block {
+    border: 1px black solid;
+    margin: 10px 10px 50px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.block h1 {
+    font-size: 20px;
+}
+
+.osiblock {
+    display: block;
+}
+
+.blocklist {
+    display: inline-block;
+    width: 250px;
+    height: auto;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.blockpas {
+    display: inline-block;
+    width: 500px;
+    vertical-align:top;
+    font-size: 18px;
+}
+
+.blockpas b {
+    color: #9F92CA;
+}
+
+strong{
+    color: orange;
+}
+
+.blockpas ul a {
+    text-decoration: underline;
+}
+
+.physical {
+    display: none;
 }
