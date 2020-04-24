@@ -1,10 +1,13 @@
 function appearphysic() {
-var a = document.getElementById("physic");
+    var a = document.getElementById("physic");
     if (a.style.display === "none") {
         a.style.display = "block";
     } else {
         a.style.display = "none";
     }
+    var ablock = document.getElementById("physicalblock");
+    ablock.style.backgroundColor = "orange";
+    ablock.style.color = "white";
 }
 
 function appeardata() {
