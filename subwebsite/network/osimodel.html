@@ -5,16 +5,7 @@
         <link rel="icon" href="http://loophole.nctu.me/image/favicon.ico" type="x-icon" />
         <link rel="stylesheet" type="text/css" href="osimodel.css">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-        <script>
-            function myFunction() {
-            var x = document.getElementById("physic");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-            }
-        </script>
+        <script src="http://loophole.nctu.me/display.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -57,10 +48,10 @@
                     </p>
                     <div class="osiblock">
                         <div class="blocklist">
-                            <div class="block" onclick="myFunction()">
+                            <div class="block" onclick="appearphysic()">
                                 <h1>Physical Layer</h1>
                             </div>
-                            <div class="block">
+                            <div class="block" onclick="appeardata()">
                                 <h1>Datalink Layer</h1>
                             </div>
                             <div class="block">
@@ -113,6 +104,10 @@
                                     <b>Transmission Modes:</b> <br>physical layer determines the direction of the connection. Some terms you might want to know, such as,
                                     <strong>Simplex</strong> (one direction)<strong>, Half Duplex </strong>(both direction, not the same time)<strong>, Full Duplex</strong> (both direction, simultaneously)
                                 </ul>
+                            </div>
+                            <div class="datalink" id="data">
+                                <p><b>Line Configuration:</b> <br>This layer can hold two types of configuration: <strong>point to point configuration</strong> (connection between two devices)
+                                and <strong>multipoint configuration</strong> (connection between more than two device).</p>
                             </div>
                         </div>
                     </div>

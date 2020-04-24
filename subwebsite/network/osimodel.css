@@ -81,3 +81,7 @@ strong{
 .physical {
     display: none;
 }
+
+.datalink {
+    display: none;
+}
