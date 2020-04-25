@@ -13,11 +13,17 @@ function appearphysic() {
     }
 }
 
-function appeardata() {
-var b = document.getElementById("data");
-    if (b.style.display === "none") {
-        b.style.display = "block";
+function appearphysic() {
+    var a = document.getElementById("data");
+    var ablock = document.getElementById("datablock");
+    var text = document.getElementById("datatext");
+    if (a.style.display === "none") {
+        a.style.display = "block";
+        ablock.style.backgroundColor = "orange";
+        text.style.color = "white";
     } else {
-        b.style.display = "none";
+        a.style.display = "none";
+        ablock.style.backgroundColor = "white";
+        text.style.color = "#9F92CA";
     }
 }
