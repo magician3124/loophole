@@ -80,9 +80,9 @@ strong{
 }
 
 .physical {
-    display: none;
+    display: block;
 }
 
 .datalink {
-    display: none;
+    display: block;
 }
