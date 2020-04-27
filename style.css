@@ -19,14 +19,14 @@ a {
 
 @font-face {
     font-family: 'roboto';
-    src: url("http://loophole.nctu.me/fonts/roboto/roboto-light-webfont.woff2") format("woff2"),
-         url("http://loophole.nctu.me/fonts/roboto/roboto-light-webfont.woff") format("woff");
+    src: url("http://loophole.studio/fonts/roboto/roboto-light-webfont.woff2") format("woff2"),
+         url("http://loophole.studio/fonts/roboto/roboto-light-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.nctu.me/image/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.studio/image/hero.jpg");
   width: 100%;
   height: 400px;
   background-attachment: fixed;
@@ -130,7 +130,7 @@ a {
 #item-1{
     width: 500px;
     height: 300px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.nctu.me/image/osi-model.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.studio/image/osi-model.jpg");
     background-position: center;
     background-size: 500px;
     background-repeat: no-repeat;
