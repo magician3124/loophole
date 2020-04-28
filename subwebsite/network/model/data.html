@@ -93,25 +93,25 @@
                             <div class="data">
                                 <h1>Data Link Layer</h1>
                                 <p>When you think of Data Link layer, consider it as the manager who control data
-                                to be transfer from point to point. However, it is only in charge of the data that
+                                to be transfer from <strong>point to point.</strong> However, it is only in charge of the data that
                                 transfer under the <strong>same</strong> network. What is interesting is that Data Link
-                                layer takes the packege from the network layer and break them down into frames. Let's now
+                                layer takes the packege from the <strong>network layer</strong> and break them down into <strong>frames</strong>. Let's now
                                 talk about the major functions of Data Link layer.</p>
                                 <ul>
                                     <b>Framing: </b> <br>As I've mentioned, Data Link Layer will break the stream of bits,
-                                    received from Network Layer, into a managable unit called frame.
+                                    received from <strong>Network Layer,</strong> into a managable unit called <strong>frame.</strong>
                                 </ul>
                                 <ul>
-                                    <b>Physical Addressing: </b> <br>Data Link layer will add a header in front of the frame, making it
+                                    <b>Physical Addressing: </b> <br>Data Link layer will add a <strong>header</strong> in front of the frame, making it
                                     recognizable if it is distributed to different systems on the network.
                                 </ul>
                                 <ul>
                                     <b>Flow Control: </b> <br>What if all the cars on a highway drive with a different speed? Probably there is
-                                    going to have a serious traffic jam. Just like how network stuck if a fast transmitter connets with a slow receiver.
+                                    going to have a serious traffic jam. Just like how network stuck if a <strong>fast transmitter</strong> connets with a <strong>slow receiver.</strong>
                                     This is also why Data Link layer is important, since it prevents this problem.
                                 </ul>
                                 <ul>
-                                    <b>Error Control: </b> <br>To prevent from losing frames and unintentional duplications, Data Link layer add a trailer
+                                    <b>Error Control: </b> <br>To prevent from losing frames and unintentional duplications, Data Link layer add a <strong>trailer</strong>
                                     at the end of the frame to detect if anything is going wrong.
                                 </ul>
                                 <ul>
@@ -122,17 +122,19 @@
                                 </ul>
                                 <img src="http://loophole.studio/image/data.png" alt="" id="framepic">
                                 <h1>Sublayers</h1>
-                                <p>Data Link Layer can be seperated into two parts: Logical Link Control(LLC) and Media Access Control(MAC).</p>
+                                <p>Data Link Layer can be seperated into two parts: <strong>Logical Link Control(LLC) and Media Access Control(MAC).</strong></p>
                                 <ul>
                                     <b>Logical Link Control(LLC): </b> it deals with <strong>protocols, flow controlling, and error controlling.</strong> I've done some research before writing
                                     this; however, I didn't understand lots of the information I received... So I decided to just tell you a few general functions it perform. Do some research
-                                    if you really want to know more. <strong>(By the way, unable to understand the information you are looking for is really common while searching for something that
+                                    if you really want to know more.<br>
+                                    <br>By the way, unable to understand the information you are looking for is really common while searching for something that
                                     is so broad. Researching things related to information system will make it even tougher, since there are tons of scientific terms. However, don't give up.
                                     As you know more about this field of knowledge as a whole. Trust me, one day when you looked back on what you didn't understand then, it will be a piece of
-                                    cake for you)</strong>
+                                    cake for you
+                                    <br>
                                 </ul>
                                 <ul>
-                                    <b>Media Access Control(MAC): </b> MAC is a unique address! (Not like IP address which is a type of logical address that you can change) It deals with the
+                                    <b>Media Access Control(MAC): </b> MAC is a <strong>unique address!</strong> (Not like IP address which is a type of <strong>logical address</strong> that you can change) It deals with the
                                     control of media. I know it sound super vague, but just keep that in mind for now, or else, I'm never going to finish exlpaining OSI model. I might pay more
                                     attention explaining it if I decided to post another post about address in the future.
                                 </ul>
