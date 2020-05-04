@@ -23,6 +23,11 @@
     height: auto;
 }
 
+#robotpic{
+    width: 500px;
+    height: auto;
+}
+
 .pic-container {
     width: 100%;
     height: 300px;
