@@ -89,32 +89,39 @@
                                 <h1>Data Link Layer</h1>
                                 <p>When you think of Data Link layer, consider it as the manager who controls data to be transferred from <strong>point to point.</strong> However, it is only in charge of the data that transfer under the <strong>same</strong> network. What is interesting is that Data Link layer takes packages from the <strong>network layer</strong> and breaks them down into <strong>frames</strong>. Let's now talk about the major functions of Data Link layer.</p>
                                 <ul>
-                                    <b>Framing: </b> <br>As I've mentioned, Data Link Layer will break the stream of bits, received from <strong>Network Layer,</strong> into a manageable unit called <strong>frame.</strong>
+                                    <b>Framing: </b> <br>
+                                    As I've mentioned, Data Link Layer will break stream of bits that is received from <strong>Network Layer</strong>, into a manageable unit called <strong>frame.</strong>
                                 </ul>
                                 <ul>
-                                    <b>Physical Addressing: </b> <br>Data Link layer will add a <strong>header</strong> in front of the frame, making it recognizable if it is distributed to different systems on the network.
+                                    <b>Physical Addressing: </b> <br>
+                                    Data Link layer will add a <strong>header</strong> in front of the frame, making it recognizable if it is sended to different systems on the network.
                                 </ul>
                                 <ul>
-                                    <b>Flow Control: </b> <br>What if all the cars on a highway drive at different speeds? Probably there is going to have a serious traffic jam. Just like how network stuck if a <strong>fast transmitter</strong> connects with a <strong>slow receiver</strong>. This is also why Data Link layer is important since it prevents this problem.
+                                    <b>Flow Control: </b> <br>
+                                    What if all cars on a highway drive at different speeds? Probably there will be a serious traffic jam. Just like how network will stuck if a <strong>fast transmitter</strong> connects with a <strong>slow receiver</strong>. Data Link layer solves this porblem, making devices connect fluently by controlling the flow.
                                 </ul>
                                 <ul>
-                                    <b>Error Control: </b> <br>To prevent losing frames and unintentional duplications, Data Link layer adds a <strong>trailer</strong> at the end of the frame to detect if anything is going wrong.
+                                    <b>Error Control: </b> <br>
+                                    To prevent losing frames and unintentional duplications, Data Link layer adds a <strong>trailer</strong> at the end of the frame to detect if anything is missing.
                                 </ul>
                                 <ul>
-                                    <b>Multiple Access: </b> <br>To prevent collisions, Data Link layer provides mechanisms such as <strong>CSMA/CD</strong> to make it possible to access shared media from different systems. I know you probably never heard of what CSMA/CD is. Don't be too worried about it, but if you want to know, I would like to explain it at the end of the passage because it involves something you need to know first, or else more and more weird terms are going to pop up.
+                                    <b>Multiple Access: </b> <br>To prevent collisions, Data Link layer provides mechanisms such as <strong>CSMA/CD</strong> to make it possible to access shared media from different systems. If you are wondering what CSMA/CD is, here is a <a href="https://www.computerhope.com/jargon/c/csmacd.htm" target="_blank">link</a> for you to learn more.
                                 </ul>
                                 <img src="http://loophole.studio/image/data.png" alt="" id="framepic">
                                 <h1>Sublayers</h1>
                                 <p>Data Link Layer can be separated into two parts: <strong>Logical Link Control(LLC) and Media Access Control(MAC).</strong></p>
                                 <ul>
-                                    <b>Logical Link Control(LLC): </b>it deals with <strong>protocols, flow controlling, and error controlling.</strong> I've done some research before writing this; however, I didn't understand lots of the information I received... So I decided to just tell you a few general functions it performs. Do some research if you want to know more.<br>
-                                    <br>By the way, unable to understand the information you are looking for is common while searching for something so broad. Researching things related to information systems will make it even tougher since there are tons of scientific terms. However, don't give up. As you know more about this field of knowledge as a whole. Trust me, one day when you looked back on what you didn't understand then, it will be a piece of cake for you.
-                                    <br>
+                                    <b>Logical Link Control(LLC): </b>it deals with <strong>protocols, flow controlling, and error controlling.</strong><br>
                                 </ul>
                                 <ul>
-                                    <b>Media Access Control(MAC): </b>MAC is a <strong>unique address!</strong> (Not like IP address which is a type of <strong>logical address</strong> that you can change) It deals with the control of media. I know it sounds super vague, but just keep that in mind for now, or else, I'm never going to finish explaining OSI model. I might pay more attention to explain it if I decided to post another post about addresses in the future.
+                                    <b>Media Access Control(MAC): </b>MAC is a <strong>unique address!</strong> (Different from an IP address which is a type of <strong>logical address</strong> that can be changed) Let's list out some functions MAC perform.
+                                    <ul>
+                                        
+
+
+
+                                    </ul>
                                 </ul>
-                                <p>CSMA/CD, stands for (carrier sense multiple access/collision detection) is MAC (media access control) protocol</p>
                             </div>
                         </div>
                     </div>
