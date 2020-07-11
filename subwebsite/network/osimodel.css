@@ -114,12 +114,12 @@ strong{
     /* display: inline-block; */
     width: 250px;
     height: 300px;
-    margin-left: 10px;
+    margin-left: 150px;
 }
 
 .contentPic img{
-    height: auto;
-    width: auto;
+    height: 250;
+    width: 300;
 }
 
 .contentTable ul{
