@@ -98,6 +98,10 @@ strong{
     display: block;
 }
 
+.physical img {
+    height: 300px;
+    width: 300px;
+}
 .content{
     display: flex;
 }
