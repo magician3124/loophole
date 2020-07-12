@@ -18,4 +18,7 @@ function cite_2(){
     document.getElementById("2").scrollIntoView();
 }
 
+function cite_3(){
+    document.getElementById("3").scrollIntoView();
+}
 
