@@ -26,6 +26,10 @@ function channel(){
     document.getElementById("channel").scrollIntoView();
 }
 
+function reference(){
+    document.getElementById("refer").scrollIntoView();
+}
+
 function transform(){
     document.getElementById("transform").scrollIntoView();
 }
