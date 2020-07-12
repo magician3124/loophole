@@ -114,6 +114,10 @@ strong{
     background-color: #E7E7E7;
 }
 
+.contentTable a{
+    color: black;
+}
+
 .contentPic{
     /* display: inline-block; */
     width: 250px;

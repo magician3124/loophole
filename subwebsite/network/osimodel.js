@@ -6,6 +6,26 @@ function signals(){
     document.getElementById("signals").scrollIntoView();
 }
 
+function digitalSignal(){
+    document.getElementById("digitalSignal").scrollIntoView();
+}
+
+function analogSignal(){
+    document.getElementById("analogSignal").scrollIntoView();
+}
+
+function channel(){
+    document.getElementById("channel").scrollIntoView();
+}
+
+function sync(){
+    document.getElementById("sync").scrollIntoView();
+}
+
+function channel(){
+    document.getElementById("channel").scrollIntoView();
+}
+
 function transform(){
     document.getElementById("transform").scrollIntoView();
 }
