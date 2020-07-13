@@ -28,11 +28,11 @@
     width: auto;
 }
 
-#networkBlock{
+#physicalBlock{
     background-color: orange;
 }
 
-#networkBlock h1{
+#physicalBlock h1{
     color: white;
 }
 
