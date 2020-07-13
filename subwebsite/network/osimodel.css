@@ -28,6 +28,19 @@
     width: auto;
 }
 
+#networkBlock{
+    background-color: orange;
+}
+
+#networkBlock h1{
+    color: white;
+}
+
+#config{
+    height: 300px;
+    width: auto;
+}
+
 .pic-container {
     width: 100%;
     height: 300px;
