@@ -138,9 +138,9 @@ strong{
 
 .contentPic{
     /* display: inline-block; */
-    width: 300px;
+    width: 400px;
     height: auto;
-    margin-left: 100px;
+    margin-left: 80px;
 }
 
 .contentPic img{
