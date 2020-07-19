@@ -46,3 +46,6 @@ function cite_3(){
     document.getElementById("3").scrollIntoView();
 }
 
+function cite_4(){
+    document.getElementById("4").scrollIntoView();
+}
