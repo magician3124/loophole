@@ -52,7 +52,7 @@
 }
 
 #tdm{
-    height: 300px;
+    height: 265px;
     width: auto;
 }
 
@@ -137,8 +137,8 @@ strong{
 .contentTable{
     /* display: inline-block; */
     text-align: center;
-    width: 350px;
-    height: 500px;
+    width: 700px;
+    height: auto;
     background-color: #E7E7E7;
 }
 
@@ -155,7 +155,7 @@ strong{
 
 .contentPic img{
     height: 250px;
-    width: 300px;
+    width: auto;
 }
 
 .contentTable ul{

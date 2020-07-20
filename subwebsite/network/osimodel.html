@@ -106,6 +106,14 @@
                                                 </ul>
                                                 <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="channel()">Channel Capacity</a></li>
                                                 <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="sync()">Synchronization</a></li>
+                                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="config()">Line Configuration</a></li>
+                                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Multiplexing</a></li>
+                                                <ul>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Frequency Division Multiplexing (FDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Time Division Multiplexing (TDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Wavelength Division Multiplexing (WDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Code Division Multiplexing (CDM)</a></li>
+                                                </ul>
                                             </ol>
                                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="reference()">reference</a></li>
                                             
@@ -117,27 +125,28 @@
                                 </div>
                                 <h1 id="physicsLayer">Physical Layer</h1>
                                 <p>
+                                    <br>
                                     Physical layer is all about physical medium (physical connection). Think about things you can physically touch that are used to transfer data, such as <strong>cables, pinouts, voltages, NIC</strong> (Network interface card), <strong>hub, and repeater</strong> (I know some of them you might not be familiar with. It’s okay, we will discuss them in the future). Equipment above is considered part of the physical layer. Now, let’s talk about what are some of its major functions: <strong>transforming bits, data rate, synchronization, line configuration, topologies, transmission modes</strong><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_1()">[1]</a></p>
                                 <ul>
                                     <b id="transform">1. Transforming Bits:</b>
-                                    <br>So, as you might know, bits are used to transfer data, and Physical layer is the one that encodes bits into signals. You might start wondering, “why is it important to encode them into signals?” Well, if you are transferring data through a physical medium you have to make them into signals. Let’s say one day you have to send your table computer to a different country because you are about to study abroad, there is no way you can just send the whole computer without disassembling it. 
+                                    <br><br>So, as you might know, bits are used to transfer data, and Physical layer is the one that encodes bits into signals. You might start wondering, “why is it important to encode them into signals?” Well, if you are transferring data through a physical medium you have to make them into signals. Let’s say one day you have to send your table computer to a different country because you are about to study abroad, there is no way you can just send the whole computer without disassembling it. 
                                 </ul>
                                 <img src="http://loophole.studio/image/osi_model/physical_layer/carrypc.png" alt="" id="carrypc">
                                 <ul>
                                     <ul>
                                         <b id="signals">Signals: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_2()">[2]</a>
-                                    <br>Let’s talk about signals that I’ve just mentioned. Signals can be divided into two categories: <strong>digital signals</strong> and <strong>analog signals</strong>.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_3()">[3]</a>
+                                    <br><br>Let’s talk about signals that I’ve just mentioned. Signals can be divided into two categories: <strong>digital signals</strong> and <strong>analog signals</strong>.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_3()">[3]</a>
                                     </ul>
                                     <ul>
                                         <ul>
                                             <br>
                                             <b id="digitalSignal">Digital signals: </b>
-                                            <br>As you have seen, digital signals are <strong> square waves.</strong> Besides, it uses binary code to transmit data, meaning that information is represented by <strong>“1”</strong> and <strong>“0”</strong>. Usually, “1” represents a <strong>high</strong> voltage and “0” represents a <strong>low</strong> voltage. Digital signals are generated by <strong>digital modulations</strong> which make them be time separated. It is also more accurate than analog signals. The reason for bringing this up is because it is often used in <strong>computing and digital electronics.</strong> 
+                                            <br><br>As you have seen, digital signals are <strong> square waves.</strong> Besides, it uses binary code to transmit data, meaning that information is represented by <strong>“1”</strong> and <strong>“0”</strong>. Usually, “1” represents a <strong>high</strong> voltage and “0” represents a <strong>low</strong> voltage. Digital signals are generated by <strong>digital modulations</strong> which make them be time separated. It is also more accurate than analog signals. The reason for bringing this up is because it is often used in <strong>computing and digital electronics.</strong> 
                                         </ul>
                                         <img src="http://loophole.studio/image/osi_model/physical_layer/digital_signal.png" alt="">
                                         <ul>
                                             <b id="analogSignal">Analog signals: </b>
-                                            <br>Different from digital signals, analog signals are <strong>sine waves</strong>, which are continuous signals. It is often used in <strong>audio and video transmission.</strong>
+                                            <br><br>Different from digital signals, analog signals are <strong>sine waves</strong>, which are continuous signals. It is often used in <strong>audio and video transmission.</strong>
                                             Examples of it would be something like signals from <strong>temperature sensors and light sensors</strong>. However, there is a downside of it, which is that it can be easily deteriorated by <strong>noise</strong>.
                                         </ul>
                                         <img src="http://loophole.studio/image/osi_model/physical_layer/analog_signal.png" alt="">                                            
@@ -145,38 +154,45 @@
                                 </ul>
                                 <ul>
                                     <b id="channel">2. Channel Capacity: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_2()">[2]</a>
-                                    <br>Physical layer is also in charge of defining how fast the transmission is <strong>(how many bits per sec)</strong>. It is also known as <strong>data rate</strong> and can be directly related to <strong>bandwidth (physical limitation) and error-rate.</strong>
+                                    <br><br>Physical layer is also in charge of defining how fast the transmission is <strong>(how many bits per sec)</strong>. It is also known as <strong>data rate</strong> and can be directly related to <strong>bandwidth (physical limitation) and error-rate.</strong>
                                 </ul>
                                 <ul>
                                     <b id="sync">3. Synchronization: </b>
-                                    <br>This is kind of complicated so here's a <a href="http://www4.comp.polyu.edu.hk/~comp2322/Bit and Frame Synchronization Techiques.pdf" target="_blank">link</a> I found that provides more detailed explanation) An easier way to think is that the inconsistent of the speed between the receiver and the sender often leads to a traffic jam. So, to solve this problem synchronization informs the receiver where data entities start and end.                                    
+                                    <br><br>This is kind of complicated so here's a <a href="http://www4.comp.polyu.edu.hk/~comp2322/Bit and Frame Synchronization Techiques.pdf" target="_blank">link</a> I found that provides more detailed explanation) An easier way to think is that the inconsistent of the speed between the receiver and the sender often leads to a traffic jam. So, to solve this problem synchronization informs the receiver where data entities start and end.                                    
                                 </ul>
                                 <ul>
                                     <b id="config">4. Line Configuration: </b>
-                                    <br>It can also hold two types of configuration: <strong>point to point configuration</strong> (connection between two devices) and <strong>multipoint configuration</strong> (connection between more than two device).                                    
+                                    <br><br>It can also hold two types of configuration: <strong>point to point configuration</strong> (connection between two devices) and <strong>multipoint configuration</strong> (connection between more than two device).                                    
                                 </ul>
                                 <img src="http://loophole.studio/image/osi_model/physical_layer/config.png" alt="" id="config">
                                 <ul>
                                     <ul>
                                         <b>Multiplexing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_1()">[1]</a>
-                                        <br>Multiplexing is a way of letting digital signal and analog signal passing through a shared medium simultaneously. Remember all medium all capable of multiplexing, no matter the medium is air (<strong>radio frequency</strong>), physical medium, or light (<strong>optical fiber</strong>). The basic concept of multiplexing is that when multiple computers (senders) send signals to a single medium, there is a device known as the <strong>multiplexer (MUX)</strong> collecting all the signals and distribute them to different parts of the medium. When signals are sent to the other side, another device known as the <strong>De-multiplexer (DEMUX)</strong> will identify all the signals and send them to their destination. Now let’s talk about different types of multiplexing.
+                                        <br><br>Multiplexing is a way of letting digital signal and analog signal passing through a shared medium simultaneously. Remember all medium all capable of multiplexing, no matter the medium is air (<strong>radio frequency</strong>), physical medium, or light (<strong>optical fiber</strong>). The basic concept of multiplexing is that when multiple computers (senders) send signals to a single medium, there is a device known as the <strong>multiplexer (MUX)</strong> collecting all the signals and distribute them to different parts of the medium. When signals are sent to the other side, another device known as the <strong>De-multiplexer (DEMUX)</strong> will identify all the signals and send them to their destination. Now let’s talk about different types of multiplexing.
                                     </ul>
                                     <img src="http://loophole.studio/image/osi_model/physical_layer/multiplexing.png" alt="" id="multiplex">
                                     <ul>
                                         <ul>
                                             <b>Frequency Division Multiplexing (FDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
-                                            <br> FDM is used for analog signals. This technology is utilized when the carrier is frequency and signals are sent simultaneously. It might be easier to understand by looking at the following picture.  
+                                            <br><br>FDM is used for analog signals. This technology is utilized when the carrier is frequency and signals are sent simultaneously. It might be easier to understand by looking at the following picture.  
                                             <img src="http://loophole.studio/image/osi_model/physical_layer/fdm.png" id="fdm">
                                             <br>
                                             Frequency spectrum is divided into logical channels, and a frequency known as guard band is used to separate them to avoid overlapping.
-
+                                            <br><br>
                                         </ul>
                                         <ul>
                                             <b>Time Division Multiplexing (TDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
-                                            <br>Different from FDM, TDM can be used to process analog and digital signals. Signals in FDM are sent simultaneously but with different frequency. On the other hand, signals in TDM are sent with the same frequency but at different time. This technology is used when the data rate of the media is greater than that of the source.
+                                            <br><br>Different from FDM, TDM can be used to process analog and digital signals. Signals in FDM are sent simultaneously but with different frequency. On the other hand, signals in TDM are sent with the same frequency but at different time. This technology is used when the data rate of the media is greater than that of the source.
                                             <img src="http://loophole.studio/image/osi_model/physical_layer/tdm.png" id="tdm">
                                             <br>
+                                            [5]
+                                            <br>
+                                            <strong>
+                                            When we reach the next layer, don't get confuse with TDM frames and frames we use in the next layer. They are different things!
+                                            </strong>
+                                            <br><br>
                                             In the diagram above, we can see that data are break down into small pieces and each piece will form a frame with each other. 
+                                            <br><br>
                                         </ul>
                                         <ul>
                                             <b>Wavelength Division Multiplexing (WDM):</b>
