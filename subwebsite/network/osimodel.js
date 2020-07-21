@@ -42,8 +42,8 @@ function wdm(){
     document.getElementById("wdm").scrollIntoView();
 }
 
-function tdm(){
-    document.getElementById("tdm").scrollIntoView();
+function cdm(){
+    document.getElementById("cdm").scrollIntoView();
 }
 
 function reference(){
@@ -68,4 +68,8 @@ function cite_3(){
 
 function cite_4(){
     document.getElementById("4").scrollIntoView();
+}
+
+function cite_5(){
+    document.getElementById("5").scrollIntoView();
 }
