@@ -50,8 +50,16 @@ function reference(){
     document.getElementById("refer").scrollIntoView();
 }
 
-function transform(){
-    document.getElementById("transform").scrollIntoView();
+function transform(){ 
+    document.getElementById("transform").scrollIntoView(); // for Transforming Bits
+}
+
+function trans(){
+    document.getElementById("trans").scrollIntoView(); // for Transmission Modes
+}
+
+function topo(){
+    document.getElementById("topo").scrollIntoView();
 }
 
 function cite_1(){
