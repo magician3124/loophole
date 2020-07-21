@@ -26,6 +26,26 @@ function channel(){
     document.getElementById("channel").scrollIntoView();
 }
 
+function multi(){
+    document.getElementById("multi").scrollIntoView();
+}
+
+function fdm(){
+    document.getElementById("fdm").scrollIntoView();
+}
+
+function tdm(){
+    document.getElementById("tdm").scrollIntoView();
+}
+
+function wdm(){
+    document.getElementById("wdm").scrollIntoView();
+}
+
+function tdm(){
+    document.getElementById("tdm").scrollIntoView();
+}
+
 function reference(){
     document.getElementById("refer").scrollIntoView();
 }

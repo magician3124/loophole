@@ -109,10 +109,10 @@
                                                 <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="config()">Line Configuration</a></li>
                                                 <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Multiplexing</a></li>
                                                 <ul>
-                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Frequency Division Multiplexing (FDM)</a></li>
-                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Time Division Multiplexing (TDM)</a></li>
-                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Wavelength Division Multiplexing (WDM)</a></li>
-                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Code Division Multiplexing (CDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="fdm()">Frequency Division Multiplexing (FDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="tdm()">Time Division Multiplexing (TDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="wdm()">Wavelength Division Multiplexing (WDM)</a></li>
+                                                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="cdm()">Code Division Multiplexing (CDM)</a></li>
                                                 </ul>
                                             </ol>
                                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="reference()">reference</a></li>
@@ -167,13 +167,13 @@
                                 <img src="http://loophole.studio/image/osi_model/physical_layer/config.png" alt="" id="config">
                                 <ul>
                                     <ul>
-                                        <b>Multiplexing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_1()">[1]</a>
+                                        <b id="multi">Multiplexing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_1()">[1]</a>
                                         <br><br>Multiplexing is a way of letting digital signal and analog signal passing through a shared medium simultaneously. Remember all medium all capable of multiplexing, no matter the medium is air (<strong>radio frequency</strong>), physical medium, or light (<strong>optical fiber</strong>). The basic concept of multiplexing is that when multiple computers (senders) send signals to a single medium, there is a device known as the <strong>multiplexer (MUX)</strong> collecting all the signals and distribute them to different parts of the medium. When signals are sent to the other side, another device known as the <strong>De-multiplexer (DEMUX)</strong> will identify all the signals and send them to their destination. Now let’s talk about different types of multiplexing.
                                     </ul>
                                     <img src="http://loophole.studio/image/osi_model/physical_layer/multiplexing.png" alt="" id="multiplex">
                                     <ul>
                                         <ul>
-                                            <b>Frequency Division Multiplexing (FDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
+                                            <b id="fdm">Frequency Division Multiplexing (FDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
                                             <br><br>FDM is used for analog signals. This technology is utilized when the carrier is frequency and signals are sent simultaneously. It might be easier to understand by looking at the following picture.  
                                             <img src="http://loophole.studio/image/osi_model/physical_layer/fdm.png" id="fdm">
                                             <br>
@@ -181,7 +181,7 @@
                                             <br><br>
                                         </ul>
                                         <ul>
-                                            <b>Time Division Multiplexing (TDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
+                                            <b id="tdm">Time Division Multiplexing (TDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
                                             <br><br>Different from FDM, TDM can be used to process analog and digital signals. Signals in FDM are sent simultaneously but with different frequency. On the other hand, signals in TDM are sent with the same frequency but at different time. This technology is used when the data rate of the media is greater than that of the source.
                                             <img src="http://loophole.studio/image/osi_model/physical_layer/tdm.png" id="tdm">
                                             <br>
