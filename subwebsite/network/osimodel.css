@@ -62,7 +62,17 @@
 }
 
 #trans{
-    height: 250px;
+    height: 400px;
+    width: auto;
+}
+
+#synctdm_pic{
+    height: 265px;
+    width: auto;
+}
+
+#asynctdm_pic{
+    height: 265px;
     width: auto;
 }
 
