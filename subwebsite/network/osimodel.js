@@ -62,6 +62,14 @@ function topo(){
     document.getElementById("topo").scrollIntoView();
 }
 
+function syncTdm(){
+    document.getElementById("syncTdm").scrollIntoView();
+}
+
+function asyncTdm(){
+    document.getElementById("asyncTdm").scrollIntoView();
+}
+
 function cite_1(){
     document.getElementById("1").scrollIntoView();
 }

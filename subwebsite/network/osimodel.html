@@ -111,6 +111,10 @@
                                                 <ul>
                                                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="fdm()">Frequency Division Multiplexing (FDM)</a></li>
                                                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="tdm()">Time Division Multiplexing (TDM)</a></li>
+                                                    <ul>
+                                                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="syncTdm()">Synchronous TDM</a></li>
+                                                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="asyncTdm()">Asynchronous TDM</a></li>
+                                                    </ul>
                                                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="wdm()">Wavelength Division Multiplexing (WDM)</a></li>
                                                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="cdm()">Code Division Multiplexing (CDM)</a></li>
                                                 </ul>
@@ -184,7 +188,7 @@
                                         </ul>
                                         <ul>
                                             <b id="tdm">Time Division Multiplexing (TDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_4()">[4]</a>
-                                            <br><br>Different from FDM, TDM can be used to process analog and digital signals. Signals in FDM are sent simultaneously but with different frequency. On the other hand, signals in TDM are sent with the same frequency but at different time. This technology is used when the data rate of the media is greater than that of the source.
+                                            <br><br>Different from FDM, TDM can be used to process both analog and digital signals. Signals in FDM are sent simultaneously but with different frequency. On the other hand, signals in TDM are sent with the same frequency but at different time. This technology is used when the data rate of the media is greater than that of the source.
                                             <img src="http://loophole.studio/image/osi_model/physical_layer/tdm.png" id="tdm">
                                             <br>
                                             <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite_5()">[5]</a>
@@ -193,8 +197,18 @@
                                             When we reach the next layer, don't get confuse with TDM frames and frames we use in the next layer. They are different things!
                                             </strong>
                                             <br><br>
-                                            In the diagram above, we can see that data are break down into small pieces and each piece will form a frame with each other. 
+                                            In the diagram above, we can see that data are break down into small pieces and each piece will form a frame with each other. Now let's talk about the two different type of TDM: <strong>Synchronous TDM and Asynchronous TDM.</strong>
                                             <br><br>
+                                        </ul>
+                                        <ul>
+                                            <ul>
+                                                <b id="syncTdm">Synchronous TDM:</b>
+                                                <br><br>This type of TDM is used in the transmission of digitized voice stream. Each slot in each frame is fixed, which means if the data is not ready, an empty slot will be transmited. 
+                                            </ul>
+                                            <ul>
+                                                <b id="asyncTdm">Asynchronous TDM: </b>
+                                                <br><br>Different from Synchronous TDM, Asynchronous TDM's slot are dynamic. It depends on the speed of the source and their ready state, which means that it can save channel capacity. 
+                                            </ul>
                                         </ul>
                                         <ul>
                                             <b id="wdm">Wavelength Division Multiplexing (WDM):</b>
@@ -222,9 +236,7 @@
                                     <br><br>
                                 </ul>
                                 <img id="trans" src="http://loophole.studio/image/osi_model/physical_layer/direction.png">
-                                 
-
-
+                            
                                 <b id="refer">Reference:</b>
                                 <p id="1">[1] Ahlawat, A. (n.d.). Physical Layer - OSI Reference Model. Retrieved July 12, 2020, from <br><a href="https://www.studytonight.com/computer-networks/osi-model-physical-layer" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.studytonight.com/computer-networks/osi-model-physical-layer</a></p>
                                 <p id="2">[2] DCN - Physical Layer Introduction. (n.d.). Retrieved July 12, 2020, from <br><a href="https://www.tutorialspoint.com/data_communication_computer_network/physical_layer_introduction.htm" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.tutorialspoint.com/data_communication_computer_network/physical_layer_introduction.htm</a></p>
