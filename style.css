@@ -141,6 +141,7 @@ a {
   position: relative;
 }
 
+/*
 .wrapper .sidebar{
   width: 100px;
   height: 100%;
@@ -148,7 +149,9 @@ a {
   padding: 30px 0px;
   position: fixed;
 }
+*/
 
+/*
 .wrapper .sidebar h2{
   color: #fff;
   text-transform: uppercase;
@@ -163,6 +166,8 @@ a {
     margin-bottom: 30px;
     margin-left: 20px;
 }
+*/
+/*
 
 .wrapper .sidebar ul li{
     list-style-type: none;
@@ -188,10 +193,11 @@ a {
 .wrapper .sidebar ul li:hover a{
   color: #fff;
 }
+*/
 
 .wrapper .main_content{
   width: 100%;
-  margin-left: 100px;
+/*  margin-left: 100px;*/
 }
 
 .wrapper .main_content .header{
