@@ -236,12 +236,14 @@ strong{
     }
     .blocklist {
         margin-left: 0px;
+        width: 100%;
     }
     .post{
-        margin-left: 5%;
+        margin-left: 0px;
+        padding-left: 10px;
     }
     .blockpas{
-        width: 95%;
+        width: 100%;
         margin-left: 0px;
     }
 }
