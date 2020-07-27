@@ -9,8 +9,8 @@
 }
 
 #thinking {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 #framepic {
@@ -82,7 +82,7 @@
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.studio/image/osi-model.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.studio/images/osi-model.jpg");
 }
 .post {
     margin-left: 20px;
@@ -124,7 +124,7 @@
 
 .blockpas {
     display: inline-block;
-    width: 800px;
+    width: 100%;
     vertical-align:top;
     font-size: 18px;
     margin-left: 50px;
@@ -184,4 +184,65 @@ strong{
 
 .datalink {
     display: block;
+}
+
+.reference{
+    width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+    .contentPic{
+        display: none;
+    }
+    #carrypc{
+        height: auto;
+        width: 100%;
+    }
+    #config{
+        height: auto;
+        width: 100%;
+    }
+    #multiplex{
+        height: auto;
+        width: 100%;
+    }
+    #fdm{
+        height: auto;
+        width: 100%;
+    }
+
+    #tdm{
+        height: auto;
+        width: 100%;
+    }
+
+    #topo{
+        height: auto;
+        width: 100%;
+    }
+
+    #trans{
+        height: auto;
+        width: 100%;
+    }
+
+    #synctdm_pic{
+        height: auto;
+        width: 100%;
+    }
+
+    #asynctdm_pic{
+        height: auto;
+        width: 100%;
+    }
+    .blocklist {
+        margin-left: 0px;
+    }
+    .post{
+        margin-left: 5%;
+    }
+    .blockpas{
+        width: 95%;
+        margin-left: 0px;
+    }
 }
