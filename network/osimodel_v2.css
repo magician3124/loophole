@@ -37,12 +37,6 @@ a{
     text-align: center;
 }
 
-/*
-.TableOfContent_v2 a{
-    color: #2B7EB7;
-}
-*/
-
 .WordArea{
     display: inline-block;
     width: 63%;
@@ -55,6 +49,18 @@ a{
     padding: 5%;
 }
 
+.DigitalSignalBlock_word{
+    vertical-align: top;
+    display: inline-block;
+    width: 70%;
+}
+
+.DigitalSignalBlock_pic{
+    vertical-align: top;
+    display: inline-block;
+    width: 20%;
+}
+
 /*sticky effect*/
 .sticky {
   position: fixed;
@@ -65,6 +71,13 @@ a{
   padding-top: 60px;
 }
 
+/*pic*/
+#digital_signal_pic{
+    width: 200px;
+    height: 200px;
+}
+
+/*media*/
 @media screen and (max-width: 450px) {
     .TableOfContent_v2{
         display: block;
