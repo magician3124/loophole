@@ -16,6 +16,10 @@ a{
     color: #2B7EB7;
 }
 
+b{
+    font-size: 20px;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.studio/images/osi-model.jpg");
 }
@@ -49,13 +53,13 @@ a{
     padding: 5%;
 }
 
-.DigitalSignalBlock_word{
+.SignalBlock_word{
     vertical-align: top;
     display: inline-block;
     width: 70%;
 }
 
-.DigitalSignalBlock_pic{
+.SignalBlock_pic{
     vertical-align: top;
     display: inline-block;
     width: 20%;
@@ -73,6 +77,11 @@ a{
 
 /*pic*/
 #digital_signal_pic{
+    width: 200px;
+    height: 200px;
+}
+
+#analog_signal_pic{
     width: 200px;
     height: 200px;
 }
