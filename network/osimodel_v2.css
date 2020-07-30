@@ -65,6 +65,11 @@ b{
     width: 20%;
 }
 
+.FixedElement{
+    height: 0px;
+    width: 0px;
+}
+
 /*sticky effect*/
 .sticky {
   position: fixed;
@@ -76,12 +81,7 @@ b{
 }
 
 /*pic*/
-#digital_signal_pic{
-    width: 200px;
-    height: 200px;
-}
-
-#analog_signal_pic{
+#signal_pic{
     width: 200px;
     height: 200px;
 }
@@ -103,5 +103,12 @@ b{
         display: block;
         width: 85%;
     }
-    
+    .SignalBlock_word{
+        display: block;
+        width: 100%;
+    }
+
+    .SignalBlock_pic{
+        display: block;
+    }
 }
