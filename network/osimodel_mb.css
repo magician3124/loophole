@@ -1,0 +1,120 @@
+@import url("http://loophole.studio/style.css");
+
+@font-face {
+    font-family: 'roboto';
+    src: url("http://loophole.studio/fonts/roboto/roboto-light-webfont.woff2") format("woff2"),
+         url("http://loophole.studio/fonts/roboto/roboto-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong{
+    color: orange;
+}
+
+a{
+    color: #2B7EB7;
+}
+
+b{
+    font-size: 20px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://loophole.studio/images/osi-model.jpg");
+}
+
+.TableOfContent_v2{
+    vertical-align: top;
+    font-family: 'roboto';
+    display: block;
+    width: 90%;
+    height: 550px;
+    background-color: #E7E7E7;
+    /*Box Model*/
+    border: 0;
+    margin: 5%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px
+}
+
+.TableOfContent_v2 p{
+    text-align: center;
+}
+
+.WordArea{
+    display: block;
+    width: 85%;
+    height: 2000px;
+    background-color: white;
+    font-family: 'roboto';
+    /*Box Model*/
+    margin: 0;
+    border: 0;
+    padding: 5%;
+}
+
+.SignalBlock_word{
+    vertical-align: top;
+    display: block;
+    width: 100%;
+}
+
+.SignalBlock_pic{
+    vertical-align: top;
+    display: block;
+    width: 20%;
+}
+
+.FixedElement{
+    height: 0px;
+    width: 0px;
+}
+
+#myBtn {
+    display: block; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: orange; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    opacity: 0.5;
+}
+
+#myBtn:hover {
+    opacity: 0.8;
+}
+
+/*sticky effect*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*pic*/
+#signal_pic{
+    width: 200px;
+    height: 200px;
+}
+
+#long_pic{
+    width: 100%;
+    height: auto;
+}
+
+#trans{
+    width: 400px;
+    height: 400px;
+}
