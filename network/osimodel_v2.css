@@ -28,7 +28,7 @@ b{
     vertical-align: top;
     display: inline-block;
     width: 25%;
-    height: 6000px;
+    height: 5900px;
     background-color: #E7E7E7;
     /*Box Model*/
     margin: 0;
@@ -112,7 +112,7 @@ b{
     height: auto;
 }
 
-#trans{
+#trans_pic{
     width: 400px;
     height: 400px;
 }
