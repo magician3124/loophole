@@ -69,3 +69,7 @@ function trans(){
 function reference(){
         window.scrollTo(0, document.getElementById('refer').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-250);
 }
+
+function cite(){
+        window.scrollTo(0, document.getElementById('refer').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-250);
+}
