@@ -114,7 +114,7 @@ b{
     height: auto;
 }
 
-#trans{
-    width: 400px;
-    height: 400px;
+#trans_pic{
+    width: 100%;
+    height: auto;
 }
