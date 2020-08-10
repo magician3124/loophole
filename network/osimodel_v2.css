@@ -34,6 +34,7 @@ b{
     margin: 0;
     border: 0;
     padding: 10px;
+    margin: 20px;
     font-family: 'roboto';
 }
 
@@ -43,7 +44,7 @@ b{
 
 .WordArea{
     display: inline-block;
-    width: 63%;
+    width: 60%;
     height: 2000px;
     background-color: white;
     font-family: 'roboto';
@@ -108,8 +109,8 @@ b{
 }
 
 #long_pic{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 200px;
 }
 
 #trans_pic{
