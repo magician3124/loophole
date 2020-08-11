@@ -42,6 +42,14 @@ b{
     text-align: center;
 }
 
+.eachlayer{
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .WordArea{
     display: inline-block;
     width: 60%;
