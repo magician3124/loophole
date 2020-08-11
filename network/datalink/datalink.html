@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LoopHole</title>
+        <link rel="icon" href="http://loophole.studio/images/favicon.ico" type="x-icon" />
+        <link rel="stylesheet" type="text/css" href="datalink.css">
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="navbar.js"></script>
+        <script src="table.js"></script>
+        <script src="totop.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <div class="hero-image">
+        
+          <div class="hero-text">
+            <h1>Osi Model</h1>
+            <p>By Wilson</p>
+          </div>
+        </div>
+        <div class="menu" id="navbar">
+            <ul>
+                <li><a href="http://loophole.studio">Home</a></li>
+                <li><a href="">Network Engineering</a></li>
+                <li><a href="https://www.youtube.com/channel/UCZMPBxz5CQ46l0fO0K1duRQ?view_as=subscriber" target="_blank">My Youtube Channel</a></li>
+                <li><a href="">Post</a></li>
+            </ul>
+        </div>
+        <div class="MainContent">
+            <div class="TableOfContent_v2">
+                <p>Layers</p>
+                <div class="layers">
+                    <a href="http://loophole.studio/network/osimodel_v2.html"><div class="eachlayer" >Physical layer</div></a>
+                    <a href=""><div class="eachlayer" style="background-color: orange; color: white;">Data Link layer</div></a>
+                    <a href=""><div class="eachlayer">Network layer</div></a>
+                    <a href=""><div class="eachlayer">Transport layer</div></a>
+                    <a href=""><div class="eachlayer">Session layer</div></a>
+                    <a href=""><div class="eachlayer">Presentation layer</div></a>
+                    <a href=""><div class="eachlayer">Application layer</div></a>
+                </div>
+                <p>Table of Contents</p>
+                <ul id="intro">
+                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="PhysicsLayerScroll()">physics layer</a></li>
+                    <ol>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">Transforming Bits</a></li>
+                        <ul> 
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="Signals()">signals</a></li>
+                            <ul>
+                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="digitalSignal()">Digital Signal</a></li>
+                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="analogSignal()">Analog Signal</a></li>
+                            </ul>
+                        </ul>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="channel()">Channel Capacity</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="sync()">Synchronization</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="config()">Line Configuration</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Multiplexing</a></li>
+                        <ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="fdm()">Frequency Division Multiplexing (FDM)</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="tdm()">Time Division Multiplexing (TDM)</a></li>
+                            <ul>
+                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="syncTdm()">Synchronous TDM</a></li>
+                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="asyncTdm()">Asynchronous TDM</a></li>
+                            </ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="wdm()">Wavelength Division Multiplexing (WDM)</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="cdm()">Code Division Multiplexing (CDM)</a></li>
+                        </ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="topo()">Topologies</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="trans()">Transmission Modes</a></li>
+                    </ol>
+                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="reference()">reference</a></li>
+
+                </ul>
+            </div>
+            <div class="WordArea" onscroll="scrollFunction()">
+                <div class="FixedElement"></div>
+                <h1 id="PhysicsLayer">Data Link layer:</h1>
+                <p>When we think of data link layer we can consider it as the stuffing in a sandwich. And the two slices of bread that hold it are physical layer and network layer. Data link layer must make sure data from physical layer is correctly transmitted to network layer and vice versa. And we will cover how it performs this task in the following article. <br>Before getting started lets first look at some devices you need to know.  
+                </p>
+                <ul>
+                    <b>Hub:</b><br>
+                    Hub is a stupid guy who can’t remember others’ names just like me xd. So, whenever he’s in charge of sending data to someone, he always sends it to everyone. When you read this, you might ask “isn’t this broadcasting?” Yes, indeed, it is a type of broadcasting. So, if today computer A meant to send a package to computer B and computer A accidentally sent the package to a hub instead of a switch (we will talk about it later), not only computer B will receive the package, but every computer that is connected to the hub will receive the same package. This is because hubs will copy the package many times making sure that every computer on its ports will receive a package. Moreover, It is usually used in LAN (Local Area Network).
+                </ul>
+                
+                <ul>
+                    <b>Switch:</b><br>
+                    If hubs are the stupid guys then switches are the smart ones. Switches would memorize the MAC address of each device that is connected to it. In other words, if one day he has to send a package to computer A then only computer A will receive the package. Switches can be separated into two types: layer 2 switches and layer 3 switches. Basically, layer 3 switches can perform every layer 2 switches’ functions, and we will talk about what it can do additionally next time when we enter layer 3 – network layer.   
+                </ul>
+                                
+                <ul>
+                    <ul>
+                        <br><b>
+                        Let’s pause for a bit because I know someone would have this question. “What is mac address?”
+                        </b><br><br>
+                        MAC stands for Media Access Control. It is a hardware address meaning that it is unique and unchangeable. It is also a physical address or burn-in address, but they kind of mean the same thing. Usually mac address is tied with your Network Interface Card (NIC, a computer circuit card that makes your computer able to connect to the internet). 
+                        Here’s an example of a MAC address of an Ethernet NIC: 00:0a:86:9d:78:17
+                        As you can see, it is generated by 8 octets and each octet stand for 8 bits. Moreover, they can be separated by colons or dashes.
+                        <br><br>
+                        For the first 3 octets are known as Organizationally unique identifier (OUI), which is assign to a manufacturer by the Institute of Electrical and Electronics Engineers (IEEE) Registration Authority. Which means by looking at it you can probably figure out who made your network adapter or NICs.
+                        <br><br>
+                        <div class="homework">
+                            <b>TODAY'S HOMEWORK:</b>
+                            <br>
+                            Go to this <a href="https://hwaddress.com/?q=A4-83-E7%09" target="_blank">website</a> and go check out which company made your NIC card (type in the first three octects).
+                        </div>
+                    </ul>
+                </ul>
+                <ul>
+                    <b id="sync">3. Synchronization: </b>
+                    <br>This is kind of complicated so here's a <a href="http://www4.comp.polyu.edu.hk/~comp2322/Bit and Frame Synchronization Techiques.pdf" target="_blank">link</a> I found that provides more detailed explanation) An easier way to think is that the inconsistent of the speed between the receiver and the sender often leads to a traffic jam. So, to solve this problem synchronization informs the receiver where data entities start and end.                                    
+                </ul>
+                <ul>
+                    <b id="config">4. Line Configuration: </b>
+                    <br>It can also hold two types of configuration: <strong>point to point configuration</strong> (connection between two devices) and <strong>multipoint configuration</strong> (connection between more than two device).                                    
+                </ul>
+                <img src="http://loophole.studio/images/osi_model/physical_layer/config.png" alt="" id="long_pic">
+                <ul>
+                    <ul>
+                        <b id="multi">4. Multiplexing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a>
+                        <br>Multiplexing is a way of letting digital signal and analog signal passing through a shared medium simultaneously. Remember all medium all capable of multiplexing, no matter the medium is air (<strong>radio frequency</strong>), physical medium, or light (<strong>optical fiber</strong>). The basic concept of multiplexing is that when multiple computers (senders) send signals to a single medium, there is a device known as the <strong>multiplexer (MUX)</strong> collecting all the signals and distribute them to different parts of the medium. When signals are sent to the other side, another device known as the <strong>De-multiplexer (DEMUX)</strong> will identify all the signals and send them to their destination. Now let’s talk about different types of multiplexing.
+                    </ul>
+                    <img src="http://loophole.studio/images/osi_model/physical_layer/multiplexing.png" alt="" id="long_pic">
+                    <ul>
+                        <ul>
+                            <br>
+                            <b id="fdm">Frequency Division Multiplexing (FDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                            <br>FDM is used for analog signals. This technology is utilized when the carrier is frequency and signals are sent simultaneously. It might be easier to understand by looking at the following picture.  
+                            <img src="http://loophole.studio/images/osi_model/physical_layer/fdm_v2.png" id="long_pic">
+                            <br>
+                            Frequency spectrum is divided into logical channels, and a frequency known as guard band is used to separate them to avoid overlapping.
+                            <br><br>
+                        </ul>
+                        <ul>
+                            <b id="tdm">Time Division Multiplexing (TDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                            <br>Different from FDM, TDM can be used to process both analog and digital signals. Signals in FDM are sent simultaneously but with different frequency. On the other hand, signals in TDM are sent with the same frequency but at different time. This technology is used when the data rate of the media is greater than that of the source.
+                            <img src="http://loophole.studio/images/osi_model/physical_layer/tdm.png" id="long_pic">
+                            <br>
+                            <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[5]</a>
+                            <br>
+                            <strong>
+                            When we reach the next layer, don't get confuse with TDM frames and frames we use in the next layer. They are different things!
+                            </strong>
+                            <br><br>
+                            In the diagram above, we can see that data are break down into small pieces and each piece will form a frame with each other. Now let's talk about the two different type of TDM: <strong>Synchronous TDM and Asynchronous TDM.</strong>
+                            <br><br>
+                        </ul>
+                        <ul>
+                            <ul>
+                                <b id="syncTdm">Synchronous TDM: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                                <br>This type of TDM is used in the transmission of digitized voice stream. Each slot in each frame is fixed, which means if the data is not ready, an empty slot will be transmited. 
+                            </ul>
+                            <img src="http://loophole.studio/images/osi_model/physical_layer/synctdm.png" id="long_pic">
+                            <ul>
+                                <br>
+                                <b id="asyncTdm">Asynchronous TDM: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                                <br>Different from Synchronous TDM, Asynchronous TDM's slot are dynamic. It depends on the speed of the source and their ready state, which means that it can save channel capacity. 
+                            </ul>
+                            <img src="http://loophole.studio/images/osi_model/physical_layer/asynctdm.png" id="long_pic">
+                        </ul>
+                        <ul>
+                            <br>
+                            <b id="wdm">Wavelength Division Multiplexing (WDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a>
+                            <br>This technology is used in <strong>analog signals.</strong> Because of the different wavelengths, signals (lights) are distinguishable. Moreover, it will be multiplex into an <strong>optical fiber</strong>. You can think it as a different form of FDM but the signals are light.
+                            <br><br>
+                        </ul>
+                        <ul>
+                            <b id="cdm">Code Division Multiplexing (CDM): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a>
+                            <br>In all the different ways of multiplexing above, we pay our main focus on how to distinguish data after passing through the medium. What if we just give each signal a unique code to identify them? CDM, also called <strong>spread-spectrum technique,</strong> allows multiple data transmit over a single frequency. Moreover, it will make each signal carry a unique code known as <strong>chip.</strong> In this case, since the receiver know the chip in advance, it is able to identify the data and send it to its correct destination.
+                            <br><br>
+                        </ul>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <b id="topo">5. Topologies: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
+                    <br>Physical layer also controls how different devices are arranged in the network by using topologies. For example, <strong> Mesh, Star, Ring and Bus.</strong>
+                    <br><br>
+                </ul>
+                <img id="long_pic" src="http://loophole.studio/images/osi_model/physical_layer/topo.png">
+
+                <ul>
+                    <b id="trans">6. Transmission Modes: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
+                    <br>Physical layer determines the direction of the connection. Here are some terms for different orientations, such as <strong>Simplex (one direction), Half Duplex (both directions, not the same time), Full Duplex (both directions, simultaneously)</strong>
+                </ul>
+                <img id="trans_pic" src="http://loophole.studio/images/osi_model/physical_layer/direction.png">
+
+                <div class="reference">
+                    <b id="refer">Reference:</b>
+                    <p id="1"><a href="https://www.studytonight.com/computer-networks/osi-model-physical-layer" target="_blank">[1] Ahlawat, A. (n.d.). Physical Layer - OSI Reference Model. Retrieved July 12, 2020</a></p>
+
+                    <p id="2"><a href="https://www.tutorialspoint.com/data_communication_computer_network/physical_layer_introduction.htm" target="_blank">[2] DCN - Physical Layer Introduction. (n.d.). Retrieved July 12, 2020</a></p>
+
+
+                    <p id="3"><a href="https://www.guru99.com/analog-vs-digital.html" target="_blank">[3] Analog vs Digital: What's the Difference? (n.d.). Retrieved July 12, 2020</a></p>
+
+
+                    <p id="4"><a href="https://www.geeksforgeeks.org/frequency-division-and-time-division-multiplexing/" target="_blank">[4] S. (2019, September 09). Frequency Division and Time division multiplexing. Retrieved July 19, 2020</a></p>
+
+                    <p id="5"><a href="https://electronicscoach.com/time-division-multiplexing.html" target="_blank">[5] What is Time Division Multiplexing (TDM)? Theory,block diagram, advanatages, disadvantages and applications of TDM. (2018, October 06). Retrieved July 21, 2020</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
