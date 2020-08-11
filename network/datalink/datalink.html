@@ -75,7 +75,7 @@
             <div class="WordArea" onscroll="scrollFunction()">
                 <div class="FixedElement"></div>
                 <h1 id="PhysicsLayer">Data Link layer:</h1>
-                <p>When we think of data link layer we can consider it as the stuffing in a sandwich. And the two slices of bread that hold it are physical layer and network layer. Data link layer must make sure data from physical layer is correctly transmitted to network layer and vice versa. And we will cover how it performs this task in the following article. <br>Before getting started lets first look at some devices you need to know.  
+                <p>When we think of data link layer we can consider it as the stuffing in a sandwich. And the two slices of bread that hold it are physical layer and network layer. Data link layer must make sure data from physical layer is correctly transmitted to network layer and vice versa. And we will cover how it performs this task in the following article. <br>Before getting started let's first look at some devices you need to know.  
                 </p>
                 <ul>
                     <b>Hub:</b><br>
@@ -89,9 +89,11 @@
                                 
                 <ul>
                     <ul>
-                        <br><b>
-                        Let’s pause for a bit because I know someone would have this question. “What is mac address?”
-                        </b><br><br>
+                        <br>
+                        <div class="question">
+                            Let's pause for a bit because I know someone would have this question. “What is mac address?”
+                        </div>
+                        <br><br>
                         <b>MAC address</b>
                         <br>
                         MAC stands for Media Access Control. It is a hardware address meaning that it is unique and unchangeable. It is also a physical address or burn-in address, but they kind of mean the same thing. Usually mac address is tied with your Network Interface Card (NIC, a computer circuit card that makes your computer able to connect to the internet). 
@@ -119,23 +121,27 @@
                     <br>
                     Router is a layer 3 device so I will introduce it next time.
                 </ul>
-                
-                <p>
-                    Let’s get back to our topic – data link layer. Data link layer functions on connections that are point to point or broadcast. And you might start wondering, “what is broadcasting?” A broadcast message is a message that is sent from a single system to all the other systems in the same broadcast domain. 
-                    <br><br>
-                    <b>Then you might ask “so… what is a broadcast domain?” </b>
-                    <br>
+                Let’s get back to our topic – data link layer. Data link layer functions on connections that are point to point or broadcast. And you might start wondering, “what is broadcasting?” A broadcast message is a message that is sent from a single system to all the other systems in the same broadcast domain. 
+                <br><br>
+                <div class="question">Then you might ask “so… what is a broadcast domain?”</div>
+<!--                <br>-->
+                <ul>
                     Before answering that question, let’s first make sure you understand what ethernet is.
                     <br><br>
-                    <b>Ethernet: </b>
-                    <br>
-                    Ethernet is a technology used in wired LAN or WAN (Wide Area Network) environment. It functions to transmit data and makes sure other devices can recognize and process the information.
-                    Now let’s talk about broad cast domain.
-                    <br><br>
-                    <b>Broadcast Domain:</b>
-                    <br>
-                    It is a specific network segment that all devices can communicate with each other through ethernet broadcast. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN in to multiple broadcast domain and each port on the router is in different domains.
-                </p>
+                    <ul>
+                        <b>Ethernet: </b>
+                        <br>
+                        Ethernet is a technology used in wired LAN or WAN (Wide Area Network) environment. It functions to transmit data and makes sure other devices can recognize and process the information.
+                        Now let’s talk about broad cast domain.
+                        <br><br>
+                    </ul>
+                    
+                    <ul>
+                        <b>Broadcast Domain:</b>
+                        <br>
+                        It is a specific network segment that all devices can communicate with each other through ethernet broadcast. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN in to multiple broadcast domain and each port on the router is in different domains.
+                    </ul>
+                </ul>
                 
                 <div class="reference">
                     <b id="refer">Reference:</b>
