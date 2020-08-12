@@ -140,7 +140,19 @@
                         <b>Broadcast Domain:</b>
                         <br>
                         It is a specific network segment that all devices can communicate with each other through ethernet broadcast. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN in to multiple broadcast domain and each port on the router is in different domains.
+                        
+                        In the picture above you can see that all ports on devices such as bridges, hubs, and switches on are on the same domain. 
                     </ul>
+                </ul>
+                <div class="question">“So, what are some data link’s function?”</div>
+                <ul>
+                    <b>Framing:</b>
+                    <br>
+                    Like how I described data link layer, it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a header but not always a trailer, and the header is used to store information such as error-checking codes and addressing information. 
+                    <br><br>
+                    First thing to do: identify frames.
+                    <br><br>
+                    
                 </ul>
                 
                 <div class="reference">
