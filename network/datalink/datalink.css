@@ -10,3 +10,13 @@
     font-family: 'exo';
     font-size: 20px;
 }
+
+.intro_box{
+    display: inline-block;
+    width: 80%;
+}
+
+.intro_pic{
+    display: inline-block;
+    width: 10%;
+}
