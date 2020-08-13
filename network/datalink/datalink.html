@@ -213,9 +213,31 @@
                         <b>Length-based framing:</b>
                         <br>
                         Well, we have length-based framing. Instead of a fixed length, every frame declares how long it is. But it might still not be an ideal way because you have to make sure the receivers read the length field correctly, and it also means the receivers have to identify the beginning.
+                        <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/length_based.png" alt="" id="frame">
+                        </div>
+                    <br>
                     </ul>
                     <br>
                     So, it brings us to another alternative: <strong>Flags or Sentinels.</strong>
+                    Think about it. What if we use something recognizable to identify the start and the end of a frame? One type of indicators is a special bit or byte pattern in the header or trailer. However, it does have disadvantages. For example, special bit or byte pattern can sometimes overlap with the bits in the data, which makes the frame start later or end earlier.
+                    <br><br>
+                    But there is a solution to the problem above.
+                    <br><br>
+                    <b>Stuffing:</b>
+                    <br>
+                    This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually the bit pattern of sentinels would be 01111110 (0x7E), and it is designed for High-Level Data Link Control (HDLC) and Synchronous Data Link Control (SDLC).
+                    <br><br>
+                    <div class="question">So, where do we insert the bits?</div>
+                    <br>
+                    Whenever the senders see 5 ones beside each other, it would add a one beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would basically remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. Also, 01111111 (0x7F) is unacceptable in a data stream.
+                    <br><br>
+                    Let’s now do some math. If we use 01110 as a flag meaning that we have to insert 1 zero every 2 ones. In other words, if we use 01*n0 we have to insert 1 zero every n-1 ones. In addition, when the payload is long, we should use a long flag, and when the payload is short, we should use a short flag.
+                    <br><br>
+                    Let’s now put it in the scale of bytes
+                    It is generally similar to bit stuffing, but there are two different flags: STX and ETX. One at the very beginning, and one at the very end. In order to prevent these two flags to appear in the payload there is another character known as DLE (data-link escape) to solve this problem. However, things can get really bad when DLE accidentally appears in the payload.
+
+
                 </ul>
                 
                 <div class="reference">
