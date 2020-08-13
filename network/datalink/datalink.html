@@ -237,17 +237,23 @@
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/bitstuff.png" alt="" id="bitstuff">
                     </div>
-                    <br><br>
+                    <br>
                     Let’s now do some math. If we use 01110 as a flag meaning that we have to insert 1 zero every 2 ones. In other words, if we use <strong>01*n0</strong> we have to insert 1 zero every <strong>n-1</strong> ones. When the payload is long, we should use a long flag, and when the payload is short, we should use a short flag.
                     <br><br>
-                    Let’s now put it in the scale of <strong>bytes</strong>
-                    It is generally similar to bit stuffing, but there are two different flags: <strong>STX and ETX.</strong> One at the very beginning, and one at the very end. To prevent these two flags to appear in the payload, there is another character known as <strong>DLE (data-link escape)</strong> to solve this problem. However, things can get really bad when DLE accidentally appears in the payload. There is another way of byte stuffing known as the <strong>Consistent-Overhead Byte Stuffing.</strong>
+                    Let’s now put it in the scale of <strong>bytes.</strong> (just in case you forget. <strong>1 byte = 8 bits</strong>)
+                    It is generally similar to bit stuffing, but there are two different flags: <strong>STX and ETX.</strong> One at the very beginning, and one at the very end. To prevent these two flags to appear in the payload, there is another character known as <strong>DLE (data-link escape)</strong> to solve this problem. 
+                    <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/bytestuffing.png" alt="" id="bitstuff">
+                    </div>
+                    However, things can get really bad when DLE accidentally appears in the payload. There is another way of byte stuffing known as the <strong>Consistent-Overhead Byte Stuffing.</strong>
                     <br><br>
                     <ul>
                         <b>Consistent-Overhead Byte Stuffing: </b>
                         <br>
                         It uses <strong>0x00</strong> as a flag. You might wonder, “isn’t it making even more conflicts?” Well, it changes every 00 in the data stream. But how? It might be easier to demonstrate with a picture, so let’s look at the picture bellow.
-
+                        <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/overhand.png" alt="" id="bitstuff">
+                        </div>
                         As you can see, each 00 is changed into the distance to the next 00. The max distance is <strong>254.</strong> If there is no 00 in the distance of 254 it will be represented by <strong>255 (0xFF).</strong>
                     </ul>
                 </ul>
