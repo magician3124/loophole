@@ -13,10 +13,17 @@
 
 .intro_box{
     display: inline-block;
-    width: 80%;
+    width: 70%;
+/*    height: 120px;*/
 }
 
 .intro_pic{
     display: inline-block;
-    width: 10%;
+    width: 20%;
+    height: 120px;
+}
+
+#sandwich{
+    height: 100%;
+    width: auto;
 }
