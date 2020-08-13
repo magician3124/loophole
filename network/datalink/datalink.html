@@ -221,40 +221,44 @@
                     <br>
                     So, it brings us to another alternative: <strong>Flags or Sentinels.</strong>
                     <br><br>
-                    <b>Flags (Sentinels)</b>
-                    <br>
-                    Think about it. What if we use something recognizable to identify the start and the end of a frame? 
-                    One type of indicator is a special bit or byte pattern in the header or trailer. 
-                    However, it does have disadvantages. For example, special bit or byte patterns can sometimes overlap with the bits in the data, which makes the frame start later or end earlier. But there is a solution to this problem.
-                    <br><br>
-                    <b>Stuffing:</b>
-                    <br>
-                    This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually, the bit pattern of sentinels would be <strong>01111110 (0x7E)</strong>, and it is designed for <strong>High-Level Data Link Control (HDLC) and Synchronous Data Link Control (SDLC).</strong>
-                    <br><br>
-                    <div class="question">So, where do we insert the bits?</div>
-                    <br>
-                    Whenever the senders see <strong>5 ones</strong> beside each other, it would add a one beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. Also, <strong>01111111 (0x7F)</strong> is unacceptable in a data stream.
-                    <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/bitstuff.png" alt="" id="bitstuff">
-                    </div>
-                    <br>
-                    Let’s now do some math. If we use 01110 as a flag meaning that we have to insert 1 zero every 2 ones. In other words, if we use <strong>01*n0</strong> we have to insert 1 zero every <strong>n-1</strong> ones. When the payload is long, we should use a long flag, and when the payload is short, we should use a short flag.
-                    <br><br>
-                    Let’s now put it in the scale of <strong>bytes.</strong> (just in case you forget. <strong>1 byte = 8 bits</strong>)
-                    It is generally similar to bit stuffing, but there are two different flags: <strong>STX and ETX.</strong> One at the very beginning, and one at the very end. To prevent these two flags to appear in the payload, there is another character known as <strong>DLE (data-link escape)</strong> to solve this problem. 
-                    <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/bytestuffing.png" alt="" id="bitstuff">
-                    </div>
-                    However, things can get really bad when DLE accidentally appears in the payload. There is another way of byte stuffing known as the <strong>Consistent-Overhead Byte Stuffing.</strong>
-                    <br><br>
                     <ul>
-                        <b>Consistent-Overhead Byte Stuffing: </b>
+                        <b>Flags (Sentinels)</b>
                         <br>
-                        It uses <strong>0x00</strong> as a flag. You might wonder, “isn’t it making even more conflicts?” Well, it changes every 00 in the data stream. But how? It might be easier to demonstrate with a picture, so let’s look at the picture bellow.
+                        Think about it. What if we use something recognizable to identify the start and the end of a frame? 
+                        One type of indicator is a special bit or byte pattern in the header or trailer. 
+                        However, it does have disadvantages. For example, special bit or byte patterns can sometimes overlap with the bits in the data, which makes the frame start later or end earlier. But there is a solution to this problem.
+                        <br><br>
+                    </ul>
+                    <ul>
+                        <b>Stuffing:</b>
+                        <br>
+                        This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually, the bit pattern of sentinels would be <strong>01111110 (0x7E)</strong>, and it is designed for <strong>High-Level Data Link Control (HDLC) and Synchronous Data Link Control (SDLC).</strong>
+                        <br><br>
+                        <div class="question">So, where do we insert the bits?</div>
+                        <br>
+                        Whenever the senders see <strong>5 ones</strong> beside each other, it would add a one beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. Also, <strong>01111111 (0x7F)</strong> is unacceptable in a data stream.
                         <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/overhand.png" alt="" id="bitstuff">
+                                <img src="http://loophole.studio/images/osi_model/datalink/bitstuff.png" alt="" id="bitstuff">
                         </div>
-                        As you can see, each 00 is changed into the distance to the next 00. The max distance is <strong>254.</strong> If there is no 00 in the distance of 254 it will be represented by <strong>255 (0xFF).</strong>
+                        <br>
+                        Let’s now do some math. If we use 01110 as a flag meaning that we have to insert 1 zero every 2 ones. In other words, if we use <strong>01*n0</strong> we have to insert 1 zero every <strong>n-1</strong> ones. When the payload is long, we should use a long flag, and when the payload is short, we should use a short flag.
+                        <br><br>
+                        Let’s now put it in the scale of <strong>bytes.</strong> (just in case you forget. <strong>1 byte = 8 bits</strong>)
+                        It is generally similar to bit stuffing, but there are two different flags: <strong>STX and ETX.</strong> One at the very beginning, and one at the very end. To prevent these two flags to appear in the payload, there is another character known as <strong>DLE (data-link escape)</strong> to solve this problem. 
+                        <div class="piccontainer">
+                                <img src="http://loophole.studio/images/osi_model/datalink/bytestuffing.png" alt="" id="bitstuff">
+                        </div>
+                        However, things can get really bad when DLE accidentally appears in the payload. There is another way of byte stuffing known as the <strong>Consistent-Overhead Byte Stuffing.</strong>
+                        <br><br>
+                        <ul>
+                            <b>Consistent-Overhead Byte Stuffing: </b>
+                            <br>
+                            It uses <strong>0x00</strong> as a flag. You might wonder, “isn’t it making even more conflicts?” Well, it changes every 00 in the data stream. But how? It might be easier to demonstrate with a picture, so let’s look at the picture bellow.
+                            <div class="piccontainer">
+                                <img src="http://loophole.studio/images/osi_model/datalink/overhand.png" alt="" id="bitstuff">
+                            </div>
+                            As you can see, each 00 is changed into the distance to the next 00. The max distance is <strong>254.</strong> If there is no 00 in the distance of 254 it will be represented by <strong>255 (0xFF).</strong>
+                        </ul>                       
                     </ul>
                 </ul>
                 
