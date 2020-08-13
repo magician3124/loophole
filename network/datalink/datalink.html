@@ -188,6 +188,10 @@
                     <b>Framing:</b>
                     <br>
                     Like how I described data link layer, it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
+                    <br>
+                    <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/frame.png" alt="" id="frame">
+                        </div>
                     <br><br>
                     First thing to do: identify frames.
                     <br><br>
