@@ -192,10 +192,30 @@
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/frame.png" alt="" id="frame">
                         </div>
+                    <br>
+                    The first thing to do: identify frames.
+                    <br>
+                    Receivers have to know where frames start and end so that they can identify the transmitted data.
+                    <br>
+                    Types of framing: <strong>Fixed length (bits) framing, fixed duration (second) framing, and length-based framing.</strong>
                     <br><br>
-                    First thing to do: identify frames.
-                    <br><br>
-                    
+                    <ul>
+                        <b>Fixed length (bits) framing:</b>
+                        <br>
+                        In this type of framing, the receivers are easier to understand and process the frames. However, it is inefficient when you are dealing with small payloads. Moreover, it will also be inconvenient to handle big payloads because you have to break them down making them fragmented.
+                        <br><br>
+                        <div class="question">
+                            So, you might ask, “What is a better way of framing?”
+                        </div>
+                        <br>
+                    </ul>
+                    <ul>
+                        <b>Length-based framing:</b>
+                        <br>
+                        Well, we have length-based framing. Instead of a fixed length, every frame declares how long it is. But it might still not be an ideal way because you have to make sure the receivers read the length field correctly, and it also means the receivers have to identify the beginning.
+                    </ul>
+                    <br>
+                    So, it brings us to another alternative: <strong>Flags or Sentinels.</strong>
                 </ul>
                 
                 <div class="reference">
