@@ -41,32 +41,27 @@
                 </div>
                 <p>Table of Contents</p>
                 <ul id="intro">
-                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="PhysicsLayerScroll()">physics layer</a></li>
+                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="PhysicsLayerScroll()">Data Link layer</a></li>
                     <ol>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">Transforming Bits</a></li>
-                        <ul> 
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="Signals()">signals</a></li>
-                            <ul>
-                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="digitalSignal()">Digital Signal</a></li>
-                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="analogSignal()">Analog Signal</a></li>
-                            </ul>
-                        </ul>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="channel()">Channel Capacity</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="sync()">Synchronization</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="config()">Line Configuration</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Multiplexing</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">hub</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">switch</a></li>
                         <ul>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="fdm()">Frequency Division Multiplexing (FDM)</a></li>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="tdm()">Time Division Multiplexing (TDM)</a></li>
-                            <ul>
-                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="syncTdm()">Synchronous TDM</a></li>
-                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="asyncTdm()">Asynchronous TDM</a></li>
-                            </ul>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="wdm()">Wavelength Division Multiplexing (WDM)</a></li>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="cdm()">Code Division Multiplexing (CDM)</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">MAC address</a></li>
                         </ul>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="topo()">Topologies</a></li>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="trans()">Transmission Modes</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">Bridge</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="TransformScroll()">Router</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="channel()">Ethernet</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="sync()">Broadcast Domain</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="config()">Framing</a></li>
+                        <ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Fixed length (bits) framing</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Length-based framing</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Flags (Sentinels)</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Stuffing</a></li>
+                            <ul>
+                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="multi()">Consistent-Overhead Byte Stuffing</a></li>
+                            </ul>
+                        </ul>
                     </ol>
                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="reference()">reference</a></li>
 
@@ -158,31 +153,30 @@
                 Let’s get back to our topic – data link layer. Data link layer functions on connections that are <strong>point to point or broadcast.</strong> And you might start wondering, “what is broadcasting?” A <strong>broadcast message</strong> is a message that is sent from a single system to all the other systems in the same <strong>broadcast domain.</strong>
                 <br><br>
                 <div class="question">Then you might ask “so… what is a broadcast domain?”</div>
-<!--                <br>-->
+                <br>
+                Before answering that question, let’s first make sure you understand what ethernet is.
+                <br><br>
                 <ul>
-                    Before answering that question, let’s first make sure you understand what ethernet is.
+                    <b>Ethernet: </b>
+                    <br>
+                    Ethernet is a technology used in wired <strong>LAN or WAN (Wide Area Network)</strong> environment. It functions to transmit data and makes sure other devices can recognize and process the information.
                     <br><br>
-                    <ul>
-                        <b>Ethernet: </b>
-                        <br>
-                        Ethernet is a technology used in wired <strong>LAN or WAN (Wide Area Network)</strong> environment. It functions to transmit data and makes sure other devices can recognize and process the information.
-                        <br><br>
-                        Now let’s talk about broad cast domain.
-                        <br><br>
-                    </ul>
-                    
-                    <ul>
-                        <b>Broadcast Domain:</b>
-                        <br>
-                        It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN in to multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router is in different domains.
-                        <br><br>
-                        <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/broadcast_domain.png" alt="" id="domain">
-                        </div>
-                        <br>
-                        In the picture above you can see that all ports on devices such as <strong>bridges, hubs, and switches</strong> are on the same domain. 
-                    </ul>
+                    Now let’s talk about broad cast domain.
+                    <br><br>
                 </ul>
+
+                <ul>
+                    <b>Broadcast Domain:</b>
+                    <br>
+                    It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN in to multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router is in different domains.
+                    <br><br>
+                    <div class="piccontainer">
+                        <img src="http://loophole.studio/images/osi_model/datalink/broadcast_domain.png" alt="" id="domain">
+                    </div>
+                    <br>
+                    In the picture above you can see that all ports on devices such as <strong>bridges, hubs, and switches</strong> are on the same domain. 
+                </ul>
+
                 <div class="question">“So, what are some data link’s function?”</div>
                 <ul>
                     <b>Framing:</b>
@@ -258,7 +252,13 @@
                                 <img src="http://loophole.studio/images/osi_model/datalink/overhand.png" alt="" id="bitstuff">
                             </div>
                             As you can see, each 00 is changed into the distance to the next 00. The max distance is <strong>254.</strong> If there is no 00 in the distance of 254 it will be represented by <strong>255 (0xFF).</strong>
-                        </ul>                       
+                            <br><br>
+                            Although the methods above might sound perfect to you, they still contain problems such as the existence of missed flags and spurious flags. So, some genius came up with the idea of using time instead.
+                        </ul>
+                        <br>
+                        <b>Clock-Based Framing</b>
+                        <br>
+                        By using an external clock, it does not need any bit to show the length of the data stream but has to rely on precise <strong>clock synchronization</strong> between the receivers and the senders. Another framing that relies on an external clock is <strong>SONET (Synchronous Optical NETwork),</strong> but I decide not to introduce it for now. If you are interested, I strongly recommend you do some research.
                     </ul>
                 </ul>
                 
