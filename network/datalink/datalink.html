@@ -256,9 +256,21 @@
                             Although the methods above might sound perfect to you, they still contain problems such as the existence of missed flags and spurious flags. So, some genius came up with the idea of using time instead.
                         </ul>
                         <br>
-                        <b>Clock-Based Framing</b>
+                        <b>Clock-Based Framing:</b>
                         <br>
                         By using an external clock, it does not need any bit to show the length of the data stream but has to rely on precise <strong>clock synchronization</strong> between the receivers and the senders. Another framing that relies on an external clock is <strong>SONET (Synchronous Optical NETwork),</strong> but I decide not to introduce it for now. If you are interested, I strongly recommend you do some research.
+                        <br>
+                        <br>
+                    </ul>
+                    <b>Addressing:</b>
+                    <br>
+                    Data-link layer utilizes hardware addressing mechanism to give different devices unique <strong>hardware addresses.</strong> This might sound familiar because we have talked about it. And if you pay enough attention you will notice that I'm now talking about <strong>MAC addresses (hardware address).</strong> But have you wondered how does one computer discover another computer’s <strong>layer 2 address?</strong> If you do, the answer to this question is quite simple, which is a method known as <strong>ARP (Address Resolution Protocol).</strong>
+                    <br>
+                    <br>
+                    <ul>
+                        <b>Address Resolution Protocol (ARP):</b>
+                        <br>
+                        The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device own the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17.
                     </ul>
                 </ul>
                 
