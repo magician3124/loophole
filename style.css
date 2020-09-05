@@ -10,6 +10,14 @@ a {
 }
 
 @font-face {
+    font-family: 'source';
+    src: url("http://loophole.studio/fonts/sourcecode/sourcecodepro-regular-webfont.woff2") format("woff2"),
+         url("http://loophole.studio/fonts/sourcecode/sourcecodepro-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'exo';
     src: url("http://loophole.studio/fonts/exo2/exo2-variablefont_wght-webfont.woff2") format("woff2"),
          url("http://loophole.studio/fonts/exo2/exo2-variablefont_wght-webfont.woff") format("woff");

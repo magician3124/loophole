@@ -176,12 +176,22 @@
                     <br>
                     In the picture above you can see that all ports on devices such as <strong>bridges, hubs, and switches</strong> are on the same domain. 
                 </ul>
-
+                <div class="question">“Does data link layer have sublayers?”</div>
+                <ul>
+                    Yes, it does. Data link layer contain two sublayers: Logical Link Control (LLC) and Media Access Control (MAC)
+                    <br>
+                    <br>
+                    <ul>
+                        <strong>Logical Link Control (LLC):</strong> this layer deals with protocols, flow-control, and error control.
+                        <br>
+                        <strong>Media Access Control (MAC):</strong> this layer deals with the control of media.
+                    </ul>
+                </ul>
                 <div class="question">“So, what are some data link’s function?”</div>
                 <ul>
                     <b id="FramingScroll">Framing:</b>
                     <br>
-                    Like how I described data link layer, it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
+                    Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer, it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
                     <br>
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/frame.png" alt="" id="frame">
@@ -270,8 +280,27 @@
                     <ul>
                         <b>Address Resolution Protocol (ARP):</b>
                         <br>
-                        The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device own the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17.
+                        The term “Address Resolution” means the process of finding an address of a computer in a network. The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
+                        There are two types of ARP message:
+                        <ol>
+                            <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
+                            <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
+                        </ol>
+                        <br>
+                        <div class="question">
+                            So are you saying that it will run ARP every time whenever my computer tries to find a device's MAC address?”
+                        </div>
+                        <br>
+                        No, actually. It will be a waste of time to run ARP when your computer has already communicated to the target device. In fact, there is a <strong>cache</strong> storing the MAC address a computer knows. If you want to check that out in your computer open your terminal and simply type:
+                        <br>
+                        <div class="command">
+                            arp -a
+                        </div>
+                        <strong>ARP cache</strong> has a specific size meaning that it will be a waste of space if your computer stores a lot of address that no longer use in it. Therefore, ARP cache is periodically <strong>flushed</strong> meaning that it will go through all the addresses and delete those that seldom use.
+
+                        <br>
                     </ul>
+                    <b>Frame Synchronization</b>
                 </ul>
                 
                 <div class="reference">

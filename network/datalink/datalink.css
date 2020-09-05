@@ -1,5 +1,14 @@
 @import url("http://loophole.studio/network/osimodel_v2.css");
 
+@font-face {
+    font-family: 'source';
+    src: url("http://loophole.studio/fonts/sourcecode/sourcecodepro-regular-webfont.woff2") format("woff2"),
+         url("http://loophole.studio/fonts/sourcecode/sourcecodepro-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .homework{
     background-color: #62b2de;
     padding: 10px;
@@ -26,6 +35,14 @@
 .piccontainer{
     display: flex;
     justify-content: center;
+}
+
+.command{
+    background-color: #ebeced;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'source';
 }
 
 #sandwich{
