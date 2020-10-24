@@ -61,7 +61,16 @@
                             <ul>
                                 <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Consistent-Overhead Byte Stuffing</a></li>
                             </ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Clock-Based Framing</a></li>
                         </ul>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Addressing</a></li>
+                        <ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Address Resolution Protocol (ARP)</a></li>
+                        </ul>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Synchronization</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Error control</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Flow control</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Multi-Access</a></li>
                     </ol>
                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="reference()">reference</a></li>
 
@@ -299,11 +308,40 @@
                         <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/arp.png" alt="" id="arp" alt="">
                         </div>
+                        <br>
                         <strong>ARP cache</strong> has a specific size meaning that it will be a waste of space if your computer stores a lot of address that no longer use in it. Therefore, ARP cache is periodically <strong>flushed</strong> meaning that it will go through all the addresses and delete those that seldom use.
 
                         <br>
                     </ul>
+                    <br>
                     <b>Frame Synchronization</b>
+                    <br>
+                    While two machines are transferring data frame, synchronization is required to keep both machines at the same pace, and this task is performed by MAC sublayer. Like what I’ve said, framing is used to make the sent data makes sense to the receiver. So, the term Frame synchronization simply means that by framing the data the receiver can detect where frame start and end and keep in the same pace with the sender. 
+                    <br><br>
+                    <b>Error control:</b>
+                    <br>
+                    During transmission of data, noise, cross-talk, and many other reasons might cause data to be incorrectly sent to the receivers. To solve this problem, there are multiple methods to ensure the transmission is accurate enough. Let's first look at a few types of errors before getting into those methods.
+                    <ul>
+                        <ol><strong>Single bits error:</strong> only one bit is the opposite to the original one.</ol>
+                        <ol><strong>Multiple bits error:</strong> more than one bit is opposite to the original one.</ol>
+                        <ol><strong>Burst error:</strong> a series of bits are corrupted</ol>
+                    </ul>
+                    <br>
+                    <b>How to detect errors?</b>
+                    <br>
+                    <b>Parity Check:</b>
+                    <ul>
+                        <ol><strong>even parity:</strong> if the original data is 100101, which means there is an odd amount of "1" (“1” * 3) a “1” is added to the right side of the data, making it 1001011. The reason for doing so is to ensure there is an even amount of “1” in the data. If there is already an even amount of “1” in the data, then a “0” is added at the end of the data.</ol>
+                        <ol><strong>odd parity:</strong> if the original data is 0101101, which means there is an even amount of 1 (“1” * 4) a “1” is added to the right side of the data, making it 01011011. The reason for doing so is to ensure there is an odd amount of “1” in the data. If there is an already odd amount of “1” in the data, then a “0” is added at the end of the data.</ol>
+                    </ul>
+                    <br>
+                    I know this sounds super confusing a graph might help you out.
+                    <br><br>
+                    Before the transmission is even started, the receiver and the sender will first agree on the same type of parity, either even or odd. And when the data is sent, the receiver can simply determine whether error exists by counting the number of “1.” If they are using even parity and the number of “1” is odd, then clearly that part of the data is corrupted, and vice versa. However, the fatal flaw of this method is that if multiple bits error, it is hard to determine whether the data is corrupted.
+                    <br><br>
+                    <b>Cyclic Redundancy Check (CRC)</b>
+                    <br>
+                    Before the data is sent, the original data bits are divided with the divisor. Then, the remainder of the division is added to the end of the data. So, the receiver can simply divide the new data with the same divisor. If the remainder is zero, meaning that no errors occur.
                 </ul>
                 
                 <div class="reference">
