@@ -130,7 +130,7 @@
                             <img src="http://loophole.studio/images/osi_model/datalink/oui.png" id="oui" alt="">
                         </div>
                         <br>
-                        For the first <strong>3 octets</strong> are known as <strong>Organizationally unique identifier (OUI),</strong> which is assign to a manufacturer by the <strong>Institute of Electrical and Electronics Engineers (IEEE) Registration Authority.</strong> Which means by looking at it you can probably figure out who made your network adapter or NICs.
+                        The first <strong>3 octets</strong> are known as <strong>Organizationally unique identifier (OUI),</strong> which is assign to a manufacturer by the <strong>Institute of Electrical and Electronics Engineers (IEEE) Registration Authority.</strong> Which means by looking at it you can figure out which company made your network adapter or NICs.
                         <br><br>
                         <div class="homework">
                             <b>TODAY'S HOMEWORK:</b>
@@ -145,7 +145,7 @@
                         <div class="intro_box">
                             <b id="BridgeScroll">Bridge:</b>
                             <br>
-                            Bridge is a device that is designed to separate the network into segments in order to reduce collision. Each segment has its own <strong>collision domain.</strong> And because each collision has its own bandwidth, which means bridge can also improve the network performance. Bridge is a layer two device that can forward or filter data. However, it is no longer a common thing we use. Instead, we prefer <strong>switches.</strong>
+                            Bridge is a device that is designed to separate the network into segments in order to reduce collision. Each segment has its own <strong>collision domain.</strong> And because each collision has its own bandwidth, utilizing bridges can also improve the network performance. Bridge is a layer two device that can forward or filter data. However, it is no longer a common thing we use. Instead, we prefer to use <strong>switches.</strong>
                         </div>
                         <div class="intro_pic">
                             <img src="http://loophole.studio/images/osi_model/datalink/bridge.png" id="sandwich" alt="">
@@ -158,9 +158,9 @@
                     <br>
                     Router is a <strong>layer 3</strong> device so I will introduce it next time.
                 </ul>
-                Let’s get back to our topic – data link layer. Data link layer functions on connections that are <strong>point to point or broadcast.</strong> And you might start wondering, “what is broadcasting?” A <strong>broadcast message</strong> is a message that is sent from a single system to all the other systems in the same <strong>broadcast domain.</strong>
+                Let’s get back to our topic – data link layer. Data link layer functions on connections that are <strong>point to point or broadcast.</strong> A <strong>broadcast message</strong> is a message that is sent from a single system to all the other systems in the same <strong>broadcast domain.</strong>
                 <br><br>
-                <div class="question">Then you might ask “so… what is a broadcast domain?”</div>
+                <div class="question">“But… what is a broadcast domain?”</div>
                 <br>
                 Before answering that question, let’s first make sure you understand what ethernet is.
                 <br><br>
@@ -169,14 +169,12 @@
                     <br>
                     Ethernet is a technology used in wired <strong>LAN or WAN (Wide Area Network)</strong> environment. It functions to transmit data and makes sure other devices can recognize and process the information.
                     <br><br>
-                    Now let’s talk about broad cast domain.
-                    <br><br>
                 </ul>
 
                 <ul>
                     <b id="BroadcastScroll">Broadcast Domain:</b>
                     <br>
-                    It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN into multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router is in different domains.
+                    It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN into multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router represent a different domain.
                     <br><br>
                     <div class="piccontainer">
                         <img src="http://loophole.studio/images/osi_model/datalink/broadcast_domain.png" alt="" id="domain">
@@ -190,22 +188,22 @@
                     <br>
                     <br>
                     <ul>
-                        <strong>Logical Link Control (LLC):</strong> this layer deals with protocols, flow-control, and error control.
+                        <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
                         <br>
-                        <strong>Media Access Control (MAC):</strong> this layer deals with the control of media.
+                        <strong>Media Access Control (MAC):</strong> deals with the control of media.
                     </ul>
                 </ul>
                 <div class="question">“So, what are some data link’s function?”</div>
                 <ul>
                     <b id="FramingScroll">Framing:</b>
                     <br>
-                    Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer, it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
+                    Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer: it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
                     <br>
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/frame.png" alt="" id="frame">
                         </div>
                     <br>
-                    The first thing to do: identify frames.
+                    The first thing to do as a receiver: identify frames.
                     <br>
                     Receivers have to know where frames start and end so that they can identify the transmitted data.
                     <br>
@@ -224,7 +222,7 @@
                     <ul>
                         <b id="LengthScroll">Length-based framing:</b>
                         <br>
-                        Well, we have length-based framing. Instead of a fixed length, every frame declares how long it is. But it might still not be an ideal way because you have to make sure the receivers read the length field correctly, and it also means the receivers have to identify the beginning.
+                        Well, we have length-based framing. Instead of a fixed length, every frame declares how long it is. But it's still not the most ideal way because you have to make sure the receivers read the length field correctly, and it also means the receivers have to identify the beginning.
                         <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/length_based.png" alt="" id="frame">
                         </div>
@@ -236,7 +234,7 @@
                     <ul>
                         <b id="FlagsScroll">Flags (Sentinels)</b>
                         <br>
-                        Think about it. What if we use something recognizable to identify the start and the end of a frame? 
+                        The basic concept of flags is to use something recognizable to identify the start and the end of a frame.
                         One type of indicator is a special bit or byte pattern in the header or trailer. 
                         However, it does have disadvantages. For example, special bit or byte patterns can sometimes overlap with the bits in the data, which makes the frame start later or end earlier. But there is a solution to this problem.
                         <br><br>
@@ -244,11 +242,12 @@
                     <ul>
                         <b id="StuffingScroll">Stuffing:</b>
                         <br>
-                        This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually, the bit pattern of sentinels would be <strong>01111110 (0x7E)</strong>, and it is designed for <strong>High-Level Data Link Control (HDLC) and Synchronous Data Link Control (SDLC).</strong>
+                        This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually, the bit pattern of flags (<strong>bit stuffing</strong>) would be <strong>01111110 (0x7E)</strong>.
+<!--                        , and it is designed for <strong>High-Level Data Link Control (HDLC) and Synchronous Data Link Control (SDLC).</strong>-->
                         <br><br>
                         <div class="question">So, where do we insert the bits?</div>
                         <br>
-                        Whenever the senders see <strong>5 ones</strong> beside each other, it would add a one beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. Also, <strong>01111111 (0x7F)</strong> is unacceptable in a data stream.
+                        Whenever the senders see <strong>5 ones</strong> beside each other, it would add 1 zero beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. In other words, <strong>01111111 (0x7F)</strong> would be unacceptable in a data stream.
                         <div class="piccontainer">
                                 <img src="http://loophole.studio/images/osi_model/datalink/bitstuff.png" alt="" id="bitstuff">
                         </div>
