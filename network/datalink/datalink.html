@@ -184,7 +184,7 @@
                 </ul>
                 <div class="question">“Does data link layer have sublayers?”</div>
                 <ul>
-                    Yes, it does. Data link layer contain two sublayers: Logical Link Control (LLC) and Media Access Control (MAC)
+                    Yes, it does. Data link layer contain two sublayers: Logical Link Control (LLC) and Media Access Control (MAC)<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
                     <br>
                     <br>
                     <ul>
@@ -195,7 +195,7 @@
                 </ul>
                 <div class="question">“So, what are some data link’s function?”</div>
                 <ul>
-                    <b id="FramingScroll">Framing:</b>
+                    <b id="FramingScroll">Framing:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
                     <br>
                     Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer: it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
                     <br>
@@ -285,9 +285,9 @@
                     <br>
                     <br>
                     <ul>
-                        <b>Address Resolution Protocol (ARP):</b>
+                        <b>Address Resolution Protocol (ARP):</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
                         <br>
-                        The term “Address Resolution” means the process of finding an address of a computer in a network. The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
+                        The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
                         There are two types of ARP message:
                         <ol>
                             <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
@@ -312,11 +312,11 @@
                         <br>
                     </ul>
                     <br>
-                    <b>Frame Synchronization</b>
+                    <b>Frame Synchronization</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
                     <br>
                     While two machines are transferring data frames, synchronization is required to keep both machines at the same pace, and this task is performed by the <strong>MAC sublayer</strong>. Like what I’ve said, framing is used to make the sent data understandable to the receiver. So, the term <strong>Frame synchronization</strong> simply means that by framing the data the receiver can detect where frame start and end and keep in the same pace with the sender. 
                     <br><br>
-                    <b>Error control:</b>
+                    <b>Error control:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
                     <br>
                     During transmission of data, noise, cross-talk, and many other factors might cause data to be incorrectly sent to the receivers. To solve this problem, there are multiple methods to ensure the transmission is accurate enough. Let's first look at a few types of errors before getting into those methods.
                     <ul>
@@ -358,7 +358,16 @@
 
                     <p id="6"><a href="https://searchnetworking.techtarget.com/definition/Ethernet" target="_blank">[6] Rouse, Margaret. “What Is Ethernet?” SearchNetworking, TechTarget, 9 Mar. 2020</a></p>
                     
-                    <p id="6"><a href="https://geek-university.com/ccna/broadcast-domain-explained/" target="_blank">[7] Rouse, Margaret. “What Is Ethernet?” SearchNetworking, TechTarget, 9 Mar. 2020</a></p>
+                    <p id="6"><a href="https://geek-university.com/ccna/broadcast-domain-explained/" target="_blank">[7] Geek University. “Broadcast Domain Explained: CCNA.” Geek University</a></p>
+                    
+                    <p id="6"><a href="https://cseweb.ucsd.edu/classes/fa13/cse123-a/lectures/123-fa13-l4.pdf" target="_blank">[8] https://cseweb.ucsd.edu/classes/fa13/cse123-a/lectures/123-fa13-l4.pdf</a></p>
+                    
+                    <p id="6"><a href="https://www.youtube.com/watch?v=Cx7foWGm5fo" target="_blank">[9] cbtnuggets. “How Address Resolution Protocol (ARP) Works.” YouTube, YouTube, 2 July 2019, www.youtube.com/watch?v=Cx7foWGm5fo.</a></p>
+                    
+                    <p id="6"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[10] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
+                    
+                    <p id="6"><a href="https://www.techopedia.com/definition/27360/frame-synchronization" target="_blank">[11] “What Is Frame Synchronization? - Definition from Techopedia.” Techopedia.com</a></p>
+                    <p id="6"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[9] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
                 </div>
             </div>
         </div>
