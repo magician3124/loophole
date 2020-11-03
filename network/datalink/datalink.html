@@ -90,7 +90,7 @@
                 <ul>
                     <div>
                         <div class="intro_box" id="HubScroll">
-                            <b>Hub:</b><br><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
+                            <b>Hub: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a><br>
                             Hub is kind of the stupid guy. Because whenever he is in charge of sending data, he never tries to remember who he should be sending to. Instead he will copy the data many times and send it to everyone that he knows. So, if today computer A meant to send a package to computer B and computer A accidentally sent the package to a hub instead of a <strong>switch</strong> (we will talk about it later), not only computer B will receive the package, but every computer that is connected to the hub will receive the same package. Moreover, hubs are usually used in <strong>LAN (Local Area Network).</strong>
                         </div>
                         <div class="intro_pic">
@@ -103,7 +103,7 @@
                 <ul>
                     <div>
                         <div class="intro_box" id="SwitchScroll">
-                            <b>Switch:</b><br><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a>
+                            <b>Switch: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a><br>
                             In contrast, switch seems to be way smarter than him. He will ensure that only the devices the sender ask to send to will receive the data by memorizing the <strong>MAC address</strong> of each device. Switches can be separated into two types: <strong>layer 2 switches and layer 3 switches.</strong> Basically, layer 3 switches can perform every layer 2 switches’ functions, and we will talk about what it can do additionally next time when we enter <strong>layer 3 – network layer.</strong>
                         </div>
                         <div class="intro_pic">
@@ -120,7 +120,7 @@
                             Let's pause for a sec, “What is a MAC address?”
                         </div>
                         <br><br>
-                        <b id="MacScroll">MAC address</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[3]</a>
+                        <b id="MacScroll">MAC address </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[3]</a>
                         <br>
                         MAC stands for <strong>Media Access Control.</strong> We categorize it as a <strong>hardware address, physical address or burn-in address</strong> meaning that it is unique and unchangeable. Usually mac address is tied with your Network Interface Card (NIC, a computer circuit card that makes your computer able to connect to the internet). 
                         Here’s an example of a MAC address of an Ethernet NIC: 00:0a:86:9d:78:17
@@ -143,7 +143,7 @@
                 <ul>
                     <div>
                         <div class="intro_box">
-                            <b id="BridgeScroll">Bridge:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                            <b id="BridgeScroll">Bridge: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
                             <br>
                             Bridge is a device that is designed to separate the network into segments in order to reduce collision. Each segment has its own <strong>collision domain.</strong> And because each collision has its own bandwidth, utilizing bridges can also improve the network performance. Bridge is a layer two device that can forward or filter data. However, it is no longer a common thing we use. Instead, we prefer to use <strong>switches.</strong>
                         </div>
@@ -172,7 +172,7 @@
                 </ul>
 
                 <ul>
-                    <b id="BroadcastScroll">Broadcast Domain:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[7]</a>
+                    <b id="BroadcastScroll">Broadcast Domain: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[7]</a>
                     <br>
                     It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN into multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router represent a different domain.
                     <br><br>
@@ -195,7 +195,7 @@
                 </ul>
                 <div class="question">“So, what are some data link’s function?”</div>
                 <ul>
-                    <b id="FramingScroll">Framing:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
+                    <b id="FramingScroll">Framing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
                     <br>
                     Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer: it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
                     <br>
@@ -285,7 +285,7 @@
                     <br>
                     <br>
                     <ul>
-                        <b>Address Resolution Protocol (ARP):</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
+                        <b>Address Resolution Protocol (ARP): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
                         <br>
                         The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
                         There are two types of ARP message:
@@ -312,11 +312,11 @@
                         <br>
                     </ul>
                     <br>
-                    <b>Frame Synchronization</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
+                    <b>Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
                     <br>
                     While two machines are transferring data frames, synchronization is required to keep both machines at the same pace, and this task is performed by the <strong>MAC sublayer</strong>. Like what I’ve said, framing is used to make the sent data understandable to the receiver. So, the term <strong>Frame synchronization</strong> simply means that by framing the data the receiver can detect where frame start and end and keep in the same pace with the sender. 
                     <br><br>
-                    <b>Error control:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
+                    <b>Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
                     <br>
                     During transmission of data, noise, cross-talk, and many other factors might cause data to be incorrectly sent to the receivers. To solve this problem, there are multiple methods to ensure the transmission is accurate enough. Let's first look at a few types of errors before getting into those methods.
                     <ul>
@@ -367,7 +367,7 @@
                     <p id="6"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[10] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
                     
                     <p id="6"><a href="https://www.techopedia.com/definition/27360/frame-synchronization" target="_blank">[11] “What Is Frame Synchronization? - Definition from Techopedia.” Techopedia.com</a></p>
-                    <p id="6"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[9] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
+                    
                 </div>
             </div>
         </div>
