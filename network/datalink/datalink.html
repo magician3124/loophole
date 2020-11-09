@@ -325,7 +325,7 @@
                         <ol><strong>Burst error:</strong> a series of bits are corrupted</ol>
                     </ul>
                     <br>
-                    <b>How to detect errors?</b>
+                    <b>How to detect errors?</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a>
                     <br>
                     <b>Parity Check:</b>
                     <ul>
@@ -346,6 +346,17 @@
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/crc.png" alt="" id="arp" alt="">
                     </div>
+                    How to correct errors? 
+                    There are two types of error corrections: Backward Error Correction and Forward Error Correction 
+                    <br><br>
+                    <ul>
+                        <strong>Backward Error Correction (BEC):</strong> When an error is detected, the receiver will send a message back to the sender to ask him to retransmit the data unit.
+                    </ul>
+                    <ul>
+                        <strong>Forward Error Correction (FEC):</strong> Instead of requesting the data, it executes error-correcting code to correct the errors. To do so, it has to know where the corrupted data existed. But how? In the simple form of FEC, each data bits are sent twice, and the receiver will check both instances if they match the protocol being used. When conformity exists in both or either one of the instances, the data is accepted. In other words, if conformity occurs in neither instance, the data will be substituted with a blank space. 
+                    </ul>
+                    <br>
+                    Although there are two ways to fix error, not both of them are application in all situations. For example, BEC can only be use when the transmission cost is cheap, such as fiber optics. However, in wireless transmission, it is too expensive to use Backward Error Correction; therefore, we use FEC instead.
                 </ul>
                 
                 <div class="reference">
@@ -373,6 +384,8 @@
                     <p id="6"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[10] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
                     
                     <p id="6"><a href="https://www.techopedia.com/definition/27360/frame-synchronization" target="_blank">[11] “What Is Frame Synchronization? - Definition from Techopedia.” Techopedia.com</a></p>
+                    
+                    <p id="7"><a href="https://www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm" target="_blank">[12] “DCN - Error Detection &amp; Correction.” Tutorialspoint, www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm. </a></p>
                     
                 </div>
             </div>
