@@ -28,7 +28,7 @@ b{
     vertical-align: top;
     display: inline-block;
     width: 25%;
-    height: 5900px;
+    height: 7800px;
     background-color: #E7E7E7;
     /*Box Model*/
     margin: 0;
@@ -130,7 +130,7 @@ b{
     .TableOfContent_v2{
         display: block;
         width: 90%;
-        height: 550px;
+        height: 700px;
         /*Box Model*/
         border: 0;
         margin: 5%;
