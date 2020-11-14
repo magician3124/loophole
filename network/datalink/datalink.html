@@ -302,16 +302,17 @@
                             <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a><br>
                             The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
                             <br><br>
+                            <b>pros:</b>
                             <ul>
-                                <b>pros:</b>
                                 <li>it is simple to implement</li>
-                                <br>
-                                <b>cons:</b>
+                            </ul>
+                            <br>
+                            <b>cons:</b>
+                            <ul>
                                 <li>it slows down the transmission process</li>
                                 <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
                                 <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
                             </ul>
-
                             <div class="piccontainer">
                                 <img src="http://loophole.studio/images/osi_model/datalink/stopwait.png" alt="" id="pic_400" alt="">
                             </div>
@@ -338,13 +339,14 @@
                     <ul>
                         <ol><strong>Even parity:</strong> If the original data is 100101, which means there is an odd amount of "1" (“1” * 3) a “1” is added to the right side of the data, making it 1001011. The reason of doing so is to ensure there is an even amount of “1” in the data. If there is already an even amount of “1” in the data, then a “0” is added at the end of the data.</ol>
                         <ol><strong>Odd parity:</strong> if the original data is 0101101, which means there is an even amount of 1 (“1” * 4) a “1” is added to the right side of the data, making it 01011011. The reason of doing so is to ensure there is an odd amount of “1” in the data. If there is an already odd amount of “1” in the data, then a “0” is added at the end of the data.</ol>
+                        <br>
+                        <ul>
+                            *I know this sounds super confusing a graph might help you out.
+                        </ul>
                     </ul>
-                    <br>
-                    I know this sounds super confusing a graph might help you out.
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/parity.png" alt="" id="bitstuff" alt="">
                     </div>
-                    <br><br>
                     Before the transmission is even started, the receiver and the sender will first agree on the same type of parity, either even or odd. And when the data is sent, the receiver can simply determine whether error exists by counting the number of “1.” If they are using even parity and the number of “1” is odd, then clearly that part of the data is corrupted, and vice versa. However, the fatal flaw of this method is that if multiple bits error, it is hard to determine whether the data is corrupted or not.
                     <br><br>
                     <b>Cyclic Redundancy Check (CRC)</b>
@@ -354,17 +356,17 @@
                             <img src="http://loophole.studio/images/osi_model/datalink/crc.png" alt="" id="arp" alt="">
                     </div><b>
                     How to correct errors? 
-                    There are two types of error corrections: Backward Error Correction and Forward Error Correction</b>
+                    </b>
                     <br><br>
+                    There are two types of error corrections: Backward Error Correction and Forward Error Correction
                     <ul>
                         <strong>Backward Error Correction (BEC):</strong> When an error is detected, the receiver will send a message back to the sender to ask him to retransmit the data unit.
-                        <br><br>
                     </ul>
                     <ul>
                         <strong>Forward Error Correction (FEC):</strong> Instead of requesting the data, it executes error-correcting code to correct the errors. To do so, it has to know where the corrupted data existed. But how? In the simple form of FEC, each data bits are sent twice, and the receiver will check both instances if they match the protocol being used. When conformity exists in both or either one of the instances, the data is accepted. In other words, if conformity occurs in neither instance, the data will be substituted with a blank space. 
                     </ul>
-                    <br>
                     Although there are two ways to fix error, not both of them are application in all situations. For example, BEC can only be use when the transmission cost is cheap, such as fiber optics. However, in wireless transmission, it is too expensive to use Backward Error Correction; therefore, we use FEC instead.
+                    <br><br>
                 
                 <div class="reference">
                     <b id="refer">Reference:</b>
