@@ -60,6 +60,11 @@
     width: auto;
 }
 
+#pic_400{
+    height: 400px;
+    width: auto;
+}
+
 #frame{
     height: 50px;
     width: auto;
