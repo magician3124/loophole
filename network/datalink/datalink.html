@@ -314,7 +314,28 @@
                     <br>
                     <b>Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
                     <br>
-                    While two machines are transferring data frames, synchronization is required to keep both machines at the same pace, and this task is performed by the <strong>MAC sublayer</strong>. Like what I’ve said, framing is used to make the sent data understandable to the receiver. So, the term <strong>Frame synchronization</strong> simply means that by framing the data the receiver can detect where frame start and end and keep in the same pace with the sender. 
+                    Frame Synchronization is a task performed by MAC sublayer. It functions to keep the receiver and sender at the same pace. This is also known as <strong>Flow control.</strong> Here are two types of flow control mechanisms: <strong>Stop and Wait and Sliding Window.</strong>
+                    <br><br>
+                    <ul>
+                        <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a><br>
+                        The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
+                        <br><br>
+                        <ul>
+                            <b>pros:</b>
+                            <li>it is simple to implement</li>
+                            <br>
+                            <b>cons:</b>
+                            <li>it slows down the transmission process</li>
+                            <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
+                            <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
+                        </ul>
+                        <br>
+                        <b>Sliding Window:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
+                        <br>
+                        Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
+                    </ul>
+                    
+<!--                    While two machines are transferring data frames, synchronization is required to keep both machines at the same pace, and this task is performed by the <strong>MAC sublayer</strong>. Like what I’ve said, framing is used to make the sent data understandable to the receiver. So, the term <strong>Frame synchronization</strong> simply means that by framing the data the receiver can detect where frame start and end and keep in the same pace with the sender. -->
                     <br><br>
                     <b>Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
                     <br>
@@ -325,7 +346,7 @@
                         <ol><strong>Burst error:</strong> a series of bits are corrupted</ol>
                     </ul>
                     <br>
-                    <b>How to detect errors?</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a>
+                    <b>How to detect errors? </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[13]</a>
                     <br>
                     <b>Parity Check:</b>
                     <ul>
@@ -345,12 +366,13 @@
                     Before the data is sent, the original data bits are divided with the divisor. Then, the remainder of the division is added to the end of the data. So, the receiver can simply divide the new data with the same divisor. If the remainder is zero, meaning that no errors occur.
                     <div class="piccontainer">
                             <img src="http://loophole.studio/images/osi_model/datalink/crc.png" alt="" id="arp" alt="">
-                    </div>
+                    </div><b>
                     How to correct errors? 
-                    There are two types of error corrections: Backward Error Correction and Forward Error Correction 
+                    There are two types of error corrections: Backward Error Correction and Forward Error Correction</b>
                     <br><br>
                     <ul>
                         <strong>Backward Error Correction (BEC):</strong> When an error is detected, the receiver will send a message back to the sender to ask him to retransmit the data unit.
+                        <br><br>
                     </ul>
                     <ul>
                         <strong>Forward Error Correction (FEC):</strong> Instead of requesting the data, it executes error-correcting code to correct the errors. To do so, it has to know where the corrupted data existed. But how? In the simple form of FEC, each data bits are sent twice, and the receiver will check both instances if they match the protocol being used. When conformity exists in both or either one of the instances, the data is accepted. In other words, if conformity occurs in neither instance, the data will be substituted with a blank space. 
@@ -375,18 +397,21 @@
 
                     <p id="6"><a href="https://searchnetworking.techtarget.com/definition/Ethernet" target="_blank">[6] Rouse, Margaret. “What Is Ethernet?” SearchNetworking, TechTarget, 9 Mar. 2020</a></p>
                     
-                    <p id="6"><a href="https://geek-university.com/ccna/broadcast-domain-explained/" target="_blank">[7] Geek University. “Broadcast Domain Explained: CCNA.” Geek University</a></p>
+                    <p id="7"><a href="https://geek-university.com/ccna/broadcast-domain-explained/" target="_blank">[7] Geek University. “Broadcast Domain Explained: CCNA.” Geek University</a></p>
                     
-                    <p id="6"><a href="https://cseweb.ucsd.edu/classes/fa13/cse123-a/lectures/123-fa13-l4.pdf" target="_blank">[8] https://cseweb.ucsd.edu/classes/fa13/cse123-a/lectures/123-fa13-l4.pdf</a></p>
+                    <p id="8"><a href="https://cseweb.ucsd.edu/classes/fa13/cse123-a/lectures/123-fa13-l4.pdf" target="_blank">[8] https://cseweb.ucsd.edu/classes/fa13/cse123-a/lectures/123-fa13-l4.pdf</a></p>
                     
-                    <p id="6"><a href="https://www.youtube.com/watch?v=Cx7foWGm5fo" target="_blank">[9] cbtnuggets. “How Address Resolution Protocol (ARP) Works.” YouTube, YouTube, 2 July 2019, www.youtube.com/watch?v=Cx7foWGm5fo.</a></p>
+                    <p id="9"><a href="https://www.youtube.com/watch?v=Cx7foWGm5fo" target="_blank">[9] cbtnuggets. “How Address Resolution Protocol (ARP) Works.” YouTube, YouTube, 2 July 2019, www.youtube.com/watch?v=Cx7foWGm5fo.</a></p>
                     
-                    <p id="6"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[10] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
+                    <p id="10"><a href="https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html" target="_blank">[10] https://erg.abdn.ac.uk/users/gorry/course/inet-pages/arp.html</a></p>
                     
-                    <p id="6"><a href="https://www.techopedia.com/definition/27360/frame-synchronization" target="_blank">[11] “What Is Frame Synchronization? - Definition from Techopedia.” Techopedia.com</a></p>
+                    <p id="11"><a href="https://www.techopedia.com/definition/27360/frame-synchronization" target="_blank">[11] “What Is Frame Synchronization? - Definition from Techopedia.” Techopedia.com</a></p>
                     
-                    <p id="7"><a href="https://www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm" target="_blank">[12] “DCN - Error Detection &amp; Correction.” Tutorialspoint, www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm. </a></p>
+                    <p id="12"><a href="https://www.gatevidyalay.com/flow-control-stop-and-wait-protocol/" target="_blank">[12] Singhal, Akshay. Akshay Singhal. 15 Dec. 2019, www.gatevidyalay.com/flow-control-stop-and-wait-protocol/.</a></p>
                     
+                    <p id="13"><a href="https://www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm" target="_blank">[13] “DCN - Error Detection &amp; Correction.” Tutorialspoint, www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm. </a></p>
+                    
+                    <p id="14"><a href="https://www.tutorialspoint.com/data_communication_computer_network/error_detection_and_correction.htm" target="_blank">[14] “DCN - Data-Link Control &amp; Protocols.” Tutorialspoint, www.tutorialspoint.com/data_communication_computer_network/data_link_control_and_protocols.htm.</a></p>
                 </div>
             </div>
         </div>
