@@ -329,8 +329,13 @@
                             <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
                             <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
                         </ul>
+                        
+                        <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/stopwait.png" alt="" id="bitstuff" alt="">
+                        </div>
+                        
                         <br>
-                        <b>Sliding Window:</b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
+                        <b>Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
                         <br>
                         Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
                     </ul>
