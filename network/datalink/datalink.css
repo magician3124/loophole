@@ -8,6 +8,15 @@
     font-style: normal;
 }
 
+.TableOfContent_v2{
+    height: 9000px;
+}
+
+@media screen and (max-width: 1200px) {
+    .TableOfContent_v2{
+        height: 900px;
+    }
+}
 
 .homework{
     background-color: #62b2de;
