@@ -90,7 +90,7 @@
                 <h1>Devices </h1>
                 <div>
                     <div class="intro_box" id="HubScroll">
-                        <b>Hub: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a><br>
+                        <b>1. Hub: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a><br>
                         Hub is kind of the stupid guy. Because whenever he is in charge of sending data, he never tries to remember who he should be sending to. Instead he will copy the data many times and send it to everyone that he knows. So, if today computer A meant to send a package to computer B and computer A accidentally sent the package to a hub instead of a <strong>switch</strong> (we will talk about it later), not only computer B will receive the package, but every computer that is connected to the hub will receive the same package. Moreover, hubs are usually used in <strong>LAN (Local Area Network).</strong>
                     </div>
                     <div class="intro_pic">
@@ -100,7 +100,7 @@
                 <br>
                 <div>
                     <div class="intro_box" id="SwitchScroll">
-                        <b>Switch: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a><br>
+                        <b>2. Switch: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a><br>
                         In contrast, switch seems to be way smarter than him. He will ensure that only the devices the sender ask to send to will receive the data by memorizing the <strong>MAC address</strong> of each device. Switches can be separated into two types: <strong>layer 2 switches and layer 3 switches.</strong> Basically, layer 3 switches can perform every layer 2 switches’ functions, and we will talk about what it can do additionally next time when we enter <strong>layer 3 – network layer.</strong>
                     </div>
                     <div class="intro_pic">
@@ -133,7 +133,7 @@
                 
                 <div>
                     <div class="intro_box">
-                        <b id="BridgeScroll">Bridge: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                        <b id="BridgeScroll">3. Bridge: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
                         <br>
                         Bridge is a device that is designed to separate the network into segments in order to reduce collision. Each segment has its own <strong>collision domain.</strong> And because each collision has its own bandwidth, utilizing bridges can also improve the network performance. Bridge is a layer two device that can forward or filter data. However, it is no longer a common thing we use. Instead, we prefer to use <strong>switches.</strong>
                     </div>
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <br>
-                <b id="RouterScroll">Router:</b>
+                <b id="RouterScroll">4. Router:</b>
                 <br>
                 Router is a <strong>layer 3</strong> device so I will introduce it next time.
                 
@@ -162,9 +162,9 @@
                         <br>
                         It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN into multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router represent a different domain.
                         <br><br>
-                    <div class="piccontainer">
-                        <img src="http://loophole.studio/images/osi_model/datalink/broadcast_domain.png" alt="" id="domain">
-                    </div>
+                        <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/broadcast_domain.png" alt="" id="domain">
+                        </div>
                     <br>
                     In the picture above you can see that all ports on devices such as <strong>bridges, hubs, and switches</strong> are on the same domain. 
 
@@ -174,13 +174,14 @@
                 <br>
                 Data link layer contain two sublayers: <strong>Logical Link Control (LLC)</strong> and <strong>Media Access Control (MAC)</strong>
                 <br>
-                <ul>
-                    <ul>
-                        <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
-                        <br>
-                        <strong>Media Access Control (MAC):</strong> deals with the control of media.
-                    </ul>
-                </ul>
+                <li>
+                    <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
+                    <br>
+                </li>
+                <li>
+                    <strong>Media Access Control (MAC):</strong> deals with the control of media.
+                </li>
+                
                 <h1>Lists of Functions</h1>
                     <b id="FramingScroll">Framing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
                     <br>
