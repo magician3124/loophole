@@ -40,8 +40,9 @@
                     <a href=""><div class="eachlayer">Application layer</div></a>
                 </div>
                 <p>Table of Contents</p>
-                <ul id="intro">
-                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="DataScroll()">Data Link layer</a></li>
+                <ul>
+                    <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="DataScroll()" id="intro">Data Link layer</a>
+                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="DeviceScroll()">Devices</a></li>
                     <ol>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="HubScroll()">hub</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="SwitchScroll()">switch</a></li>
@@ -49,32 +50,40 @@
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="MacScroll()">MAC address</a></li>
                         </ul>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="BridgeScroll()">Bridge</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="RouterScroll()">Router</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="EthernetScroll()">Ethernet</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="RouterScroll()">Router</a></li>  
+                    </ol>
+                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="GeneralScroll()">General Information</a></li>
+                    <ul>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="BroadcastScroll()">Broadcast Domain</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="SublayerScroll()">Sublayer</a></li>
+                    </ul>
+                    <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="FunctionsScroll()">Lists of Functions</a></li>
+                    <ol>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="FramingScroll()">Framing</a></li>
                         <ul>
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="FixedScroll()">Fixed length (bits) framing</a></li>
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="LengthScroll()">Length-based framing</a></li>
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="FlagsScroll()">Flags (Sentinels)</a></li>
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="StuffingScroll()">Stuffing</a></li>
-                            <ul>
-                                <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Consistent-Overhead Byte Stuffing</a></li>
-                            </ul>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Clock-Based Framing</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Consistent-Overhead Byte Stuffing</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ClockScroll()">Clock-Based Framing</a></li>
                         </ul>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Addressing</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="AddressScroll()">Addressing</a></li>
                         <ul>
-                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Address Resolution Protocol (ARP)</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ARPScroll()">Address Resolution Protocol (ARP)</a></li>
                         </ul>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Synchronization</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Error control</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Flow control</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Multi-Access</a></li>
                     </ol>
+                </ul>
+                    <ol>
+                        
+                    </ol>
                     <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="reference()">reference</a></li>
 
-                </ul>
+<!--                </ul>-->
             </div>
             <div class="WordArea" onscroll="scrollFunction()">
                 <div class="FixedElement"></div>
@@ -87,7 +96,7 @@
                         <img src="http://loophole.studio/images/osi_model/datalink/sandwich.png" id="sandwich" alt="">
                     </div>
                 </div>
-                <h1>Devices </h1>
+                <h1 id="DeviceScroll">Devices</h1>
                 <div>
                     <div class="intro_box" id="HubScroll">
                         <b>1. Hub: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a><br>
@@ -107,9 +116,9 @@
                         <img src="http://loophole.studio/images/osi_model/datalink/switch.png" id="sandwich" alt="">
                     </div>
                 </div>
-                <ul>
+                <ul id="MacScroll">
                     <ul>
-                        <div class="question" id="MacScroll">
+                        <div class="question">
                             Let's pause for a sec, “What is a MAC address?” <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[3]</a>
                         </div>
                         <br>
@@ -146,7 +155,7 @@
                 <br>
                 Router is a <strong>layer 3</strong> device so I will introduce it next time.
                 
-                <h1>General Information</h1>
+                <h1 id="GeneralScroll">General Information</h1>
                 Data link layer functions on connections that are <strong>point to point or broadcast.</strong>
                 <ul>
                     <ul>
@@ -170,7 +179,7 @@
 
                     </ul>
                 </ul>
-                <b>Sublayers of Data Link Layer: <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a></b>
+                <b id="SublayerScroll">Sublayers of Data Link Layer: <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a></b>
                 <br>
                 Data link layer contain two sublayers: <strong>Logical Link Control (LLC)</strong> and <strong>Media Access Control (MAC)</strong>
                 <br>
@@ -182,7 +191,7 @@
                     <strong>Media Access Control (MAC):</strong> deals with the control of media.
                 </li>
                 
-                <h1>Lists of Functions</h1>
+                <h1 id="FunctionsScroll">Lists of Functions</h1>
                     <b id="FramingScroll">1. Framing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
                     <br>
                     Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer: it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
@@ -254,20 +263,20 @@
                             <br><br>
                         </li>
                         <li>
-                            <b>Clock-Based Framing:</b>
+                            <b id="ClockScroll">Clock-Based Framing:</b>
                             <br>
                             By using an external clock, it does not need any bit to show the length of the data stream but has to rely on precise <strong>clock synchronization</strong> between the receivers and the senders. Another framing that relies on an external clock is <strong>SONET (Synchronous Optical NETwork),</strong> but I decide not to introduce it for now. If you are interested, I strongly recommend you do some research.
                             <br>
                             <br>
                         </li>
                     </ul>
-                    <b>2. Addressing:</b>
+                    <b id="AddressScroll">2. Addressing:</b>
                     <br>
                     Data-link layer utilizes hardware addressing mechanism to give different devices unique <strong>hardware addresses.</strong> This might sound familiar because we have talked about it. And if you pay enough attention you will notice that I'm now talking about <strong>MAC addresses (hardware address).</strong> But how does one computer discover another computer’s <strong>layer 2 address?</strong> The answer to this question is quite simple: it is a method known as <strong>ARP (Address Resolution Protocol).</strong>
 
                     <ul>
                         <li>
-                            <b>Address Resolution Protocol (ARP): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
+                            <b id="ARPScroll">Address Resolution Protocol (ARP): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
                             <br>
                             The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
                         </li>
