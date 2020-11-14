@@ -88,35 +88,27 @@
                     </div>
                 </div>
                 <h1>Devices </h1>
-                <ul>
-                    <div>
-                        <div class="intro_box" id="HubScroll">
-                            <b>Hub: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a><br>
-                            Hub is kind of the stupid guy. Because whenever he is in charge of sending data, he never tries to remember who he should be sending to. Instead he will copy the data many times and send it to everyone that he knows. So, if today computer A meant to send a package to computer B and computer A accidentally sent the package to a hub instead of a <strong>switch</strong> (we will talk about it later), not only computer B will receive the package, but every computer that is connected to the hub will receive the same package. Moreover, hubs are usually used in <strong>LAN (Local Area Network).</strong>
-                        </div>
-                        <div class="intro_pic">
-                            <img src="http://loophole.studio/images/osi_model/datalink/hub.png" id="sandwich" alt="">
-                        </div>
+                <div>
+                    <div class="intro_box" id="HubScroll">
+                        <b>Hub: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a><br>
+                        Hub is kind of the stupid guy. Because whenever he is in charge of sending data, he never tries to remember who he should be sending to. Instead he will copy the data many times and send it to everyone that he knows. So, if today computer A meant to send a package to computer B and computer A accidentally sent the package to a hub instead of a <strong>switch</strong> (we will talk about it later), not only computer B will receive the package, but every computer that is connected to the hub will receive the same package. Moreover, hubs are usually used in <strong>LAN (Local Area Network).</strong>
                     </div>
-                    
-                </ul>
-                
-                <ul>
-                    <div>
-                        <div class="intro_box" id="SwitchScroll">
-                            <b>Switch: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a><br>
-                            In contrast, switch seems to be way smarter than him. He will ensure that only the devices the sender ask to send to will receive the data by memorizing the <strong>MAC address</strong> of each device. Switches can be separated into two types: <strong>layer 2 switches and layer 3 switches.</strong> Basically, layer 3 switches can perform every layer 2 switches’ functions, and we will talk about what it can do additionally next time when we enter <strong>layer 3 – network layer.</strong>
-                        </div>
-                        <div class="intro_pic">
-                            <img src="http://loophole.studio/images/osi_model/datalink/switch.png" id="sandwich" alt="">
-                        </div>
+                    <div class="intro_pic">
+                        <img src="http://loophole.studio/images/osi_model/datalink/hub.png" id="sandwich" alt="">
                     </div>
-                    
-                </ul>
-                          
+                </div>   
+                <br>
+                <div>
+                    <div class="intro_box" id="SwitchScroll">
+                        <b>Switch: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[2]</a><br>
+                        In contrast, switch seems to be way smarter than him. He will ensure that only the devices the sender ask to send to will receive the data by memorizing the <strong>MAC address</strong> of each device. Switches can be separated into two types: <strong>layer 2 switches and layer 3 switches.</strong> Basically, layer 3 switches can perform every layer 2 switches’ functions, and we will talk about what it can do additionally next time when we enter <strong>layer 3 – network layer.</strong>
+                    </div>
+                    <div class="intro_pic">
+                        <img src="http://loophole.studio/images/osi_model/datalink/switch.png" id="sandwich" alt="">
+                    </div>
+                </div>
                 <ul>
                     <ul>
-                        <ul>
                         <div class="question" id="MacScroll">
                             Let's pause for a sec, “What is a MAC address?” <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[3]</a>
                         </div>
@@ -136,28 +128,23 @@
                             <br>
                             Go to this <a href="https://hwaddress.com/?q=" target="_blank">website</a> and go check out which company made your NIC card (type in the first three octects).
                         </div>
-                        </ul>
                     </ul>
                 </ul>
                 
-                <ul>
-                    <div>
-                        <div class="intro_box">
-                            <b id="BridgeScroll">Bridge: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
-                            <br>
-                            Bridge is a device that is designed to separate the network into segments in order to reduce collision. Each segment has its own <strong>collision domain.</strong> And because each collision has its own bandwidth, utilizing bridges can also improve the network performance. Bridge is a layer two device that can forward or filter data. However, it is no longer a common thing we use. Instead, we prefer to use <strong>switches.</strong>
-                        </div>
-                        <div class="intro_pic">
-                            <img src="http://loophole.studio/images/osi_model/datalink/bridge.png" id="sandwich" alt="">
-                        </div>
+                <div>
+                    <div class="intro_box">
+                        <b id="BridgeScroll">Bridge: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[4]</a>
+                        <br>
+                        Bridge is a device that is designed to separate the network into segments in order to reduce collision. Each segment has its own <strong>collision domain.</strong> And because each collision has its own bandwidth, utilizing bridges can also improve the network performance. Bridge is a layer two device that can forward or filter data. However, it is no longer a common thing we use. Instead, we prefer to use <strong>switches.</strong>
                     </div>
-                </ul>
-                
-                <ul>
-                    <b id="RouterScroll">Router:</b>
-                    <br>
-                    Router is a <strong>layer 3</strong> device so I will introduce it next time.
-                </ul>
+                    <div class="intro_pic">
+                        <img src="http://loophole.studio/images/osi_model/datalink/bridge.png" id="sandwich" alt="">
+                    </div>
+                </div>
+                <br>
+                <b id="RouterScroll">Router:</b>
+                <br>
+                Router is a <strong>layer 3</strong> device so I will introduce it next time.
                 
                 <h1>Functions</h1>
                 Data link layer functions on connections that are <strong>point to point or broadcast.</strong>
@@ -188,12 +175,13 @@
                 Data link layer contain two sublayers: <strong>Logical Link Control (LLC)</strong> and <strong>Media Access Control (MAC)</strong>
                 <br>
                 <ul>
-                    <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
-                    <br>
-                    <strong>Media Access Control (MAC):</strong> deals with the control of media.
+                    <ul>
+                        <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
+                        <br>
+                        <strong>Media Access Control (MAC):</strong> deals with the control of media.
+                    </ul>
                 </ul>
                 <h1>Lists of Functions</h1>
-                <ul>
                     <b id="FramingScroll">Framing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
                     <br>
                     Framing is performed by the <strong>LLC sublayer.</strong> Like how I described data link layer: it is the stuffing in a sandwich. It will receive the packets from Network layer and make them into frames. But why? Why don’t we use packets to transmit data? Is it necessary to use a new unit? Well, the answer is yes. Framing makes sure that data sent from the senders makes sense to the receivers, and it also makes it easier to detect corruption as data is broken down into pieces. Usually, the structure of frames contains a <strong>header</strong> but not always a <strong>trailer</strong>, and the header is used to store information such as <strong>error-checking codes and addressing information.</strong>
@@ -279,10 +267,12 @@
                             <br>
                             The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
                             <b>Two types of ARP message:</b>
-                            <ol>
-                                <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
-                                <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
-                            </ol>
+                            <ul>
+                                <ol>
+                                    <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
+                                    <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
+                                </ol>
+                            </ul>
                             <br>
                             <div class="question">
                                 So are you saying that it will run ARP every time whenever my computer tries to find a device's MAC address?”
@@ -308,27 +298,29 @@
                     Frame Synchronization is a task performed by MAC sublayer. It functions to keep the receiver and sender at the same pace. This is also known as <strong>Flow control.</strong> Here are two types of flow control mechanisms: <strong>Stop and Wait and Sliding Window.</strong>
                     <br><br>
                     <ul>
-                        <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a><br>
-                        The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
-                        <br><br>
                         <ul>
-                            <b>pros:</b>
-                            <li>it is simple to implement</li>
+                            <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a><br>
+                            The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
+                            <br><br>
+                            <ul>
+                                <b>pros:</b>
+                                <li>it is simple to implement</li>
+                                <br>
+                                <b>cons:</b>
+                                <li>it slows down the transmission process</li>
+                                <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
+                                <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
+                            </ul>
+
+                            <div class="piccontainer">
+                                <img src="http://loophole.studio/images/osi_model/datalink/stopwait.png" alt="" id="pic_400" alt="">
+                            </div>
+
                             <br>
-                            <b>cons:</b>
-                            <li>it slows down the transmission process</li>
-                            <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
-                            <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
+                            <b>Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
+                            <br>
+                            Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
                         </ul>
-                        
-                        <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/stopwait.png" alt="" id="pic_400" alt="">
-                        </div>
-                        
-                        <br>
-                        <b>Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
-                        <br>
-                        Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
                     </ul>
                     <br><br>
                     <b>Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
@@ -373,7 +365,6 @@
                     </ul>
                     <br>
                     Although there are two ways to fix error, not both of them are application in all situations. For example, BEC can only be use when the transmission cost is cheap, such as fiber optics. However, in wireless transmission, it is too expensive to use Backward Error Correction; therefore, we use FEC instead.
-                </ul>
                 
                 <div class="reference">
                     <b id="refer">Reference:</b>
