@@ -78,7 +78,7 @@
             </div>
             <div class="WordArea" onscroll="scrollFunction()">
                 <div class="FixedElement"></div>
-                <h1 id="DataScroll">Data Link layer:</h1>
+                <h1 class="title_big" id="DataScroll">Data Link layer:</h1>
                 <div>
                     <div class="intro_box">
                         Data link layer is like the stuffing in a sandwich. And the two slices of bread that hold it are <strong>physical layer</strong> and <strong>network layer</strong> because Data link layer ensure that data is correctly transmitted between the two layers. Let’s start from introducing some devices that belongs to the data link layer.
@@ -87,6 +87,7 @@
                         <img src="http://loophole.studio/images/osi_model/datalink/sandwich.png" id="sandwich" alt="">
                     </div>
                 </div>
+                <h1>Devices </h1>
                 <ul>
                     <div>
                         <div class="intro_box" id="HubScroll">
@@ -112,15 +113,13 @@
                     </div>
                     
                 </ul>
-                                
+                          
                 <ul>
                     <ul>
-                        <br>
-                        <div class="question">
-                            Let's pause for a sec, “What is a MAC address?”
+                        <ul>
+                        <div class="question" id="MacScroll">
+                            Let's pause for a sec, “What is a MAC address?” <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[3]</a>
                         </div>
-                        <br><br>
-                        <b id="MacScroll">MAC address </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[3]</a>
                         <br>
                         MAC stands for <strong>Media Access Control.</strong> We categorize it as a <strong>hardware address, physical address or burn-in address</strong> meaning that it is unique and unchangeable. Usually mac address is tied with your Network Interface Card (NIC, a computer circuit card that makes your computer able to connect to the internet). 
                         Here’s an example of a MAC address of an Ethernet NIC: 00:0a:86:9d:78:17
@@ -137,6 +136,7 @@
                             <br>
                             Go to this <a href="https://hwaddress.com/?q=" target="_blank">website</a> and go check out which company made your NIC card (type in the first three octects).
                         </div>
+                        </ul>
                     </ul>
                 </ul>
                 
@@ -158,42 +158,41 @@
                     <br>
                     Router is a <strong>layer 3</strong> device so I will introduce it next time.
                 </ul>
-                Let’s get back to our topic – data link layer. Data link layer functions on connections that are <strong>point to point or broadcast.</strong> A <strong>broadcast message</strong> is a message that is sent from a single system to all the other systems in the same <strong>broadcast domain.</strong><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[5]</a>
-                <br><br>
-                <div class="question">“But… what is a broadcast domain?”</div>
-                <br>
-                Before answering that question, let’s first make sure you understand what ethernet is.
-                <br><br>
+                
+                <h1>Functions</h1>
+                Data link layer functions on connections that are <strong>point to point or broadcast.</strong>
                 <ul>
-                    <b id="EthernetScroll">Ethernet: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[6]</a>
-                    <br>
-                    Ethernet is a technology used in wired <strong>LAN or WAN (Wide Area Network)</strong> environment. It functions to transmit data and makes sure other devices can recognize and process the information.
-                    <br><br>
-                </ul>
-
-                <ul>
-                    <b id="BroadcastScroll">Broadcast Domain: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[7]</a>
-                    <br>
-                    It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN into multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router represent a different domain.
-                    <br><br>
+                    <ul>
+                        <div class="question">“What is Broadcast?”<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[5]</a></div>
+                        <br>
+                        A <strong>broadcast message</strong> is a message that is sent from a single system to all the other systems in the same <strong>broadcast domain.</strong> Before explaining what a broadcast domain is, it is important for you to understand what ethernet is.
+                        <br><br>
+                        <b id="EthernetScroll">Ethernet: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[6]</a>
+                        <br>
+                        Ethernet is a technology used in wired <strong>LAN or WAN (Wide Area Network)</strong> environment. It functions to transmit data and makes sure other devices can recognize and process the information.
+                        <br><br>
+                        <b id="BroadcastScroll">Broadcast Domain: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[7]</a>
+                        <br>
+                        It is a specific network segment that all devices can communicate with each other through <strong>ethernet broadcast</strong>. Although, I haven’t explained what router is. It is important for you to know that router will divide a LAN into multiple <strong>broadcast domain</strong> and each <strong>port</strong> on the router represent a different domain.
+                        <br><br>
                     <div class="piccontainer">
                         <img src="http://loophole.studio/images/osi_model/datalink/broadcast_domain.png" alt="" id="domain">
                     </div>
                     <br>
                     In the picture above you can see that all ports on devices such as <strong>bridges, hubs, and switches</strong> are on the same domain. 
-                </ul>
-                <div class="question">“Does data link layer have sublayers?”</div>
-                <ul>
-                    Yes, it does. Data link layer contain two sublayers: Logical Link Control (LLC) and Media Access Control (MAC)<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
-                    <br>
-                    <br>
-                    <ul>
-                        <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
-                        <br>
-                        <strong>Media Access Control (MAC):</strong> deals with the control of media.
+
                     </ul>
                 </ul>
-                <div class="question">“So, what are some data link’s function?”</div>
+                <b>Sublayers of Data Link Layer: <a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a></b>
+                <br>
+                Data link layer contain two sublayers: <strong>Logical Link Control (LLC)</strong> and <strong>Media Access Control (MAC)</strong>
+                <br>
+                <ul>
+                    <strong>Logical Link Control (LLC):</strong> deals with protocols, flow-control, and error control.
+                    <br>
+                    <strong>Media Access Control (MAC):</strong> deals with the control of media.
+                </ul>
+                <h1>Lists of Functions</h1>
                 <ul>
                     <b id="FramingScroll">Framing: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[8]</a>
                     <br>
@@ -210,58 +209,48 @@
                     Types of framing: <strong>Fixed length (bits) framing, fixed duration (second) framing, and length-based framing.</strong>
                     <br><br>
                     <ul>
-                        <b id="FixedScroll">Fixed length (bits) framing:</b>
-                        <br>
-                        In this type of framing, the receivers are easier to understand and process the frames. However, it is inefficient when you are dealing with small payloads. Moreover, it will also be inconvenient to handle big payloads because you have to break them down making them fragmented.
-                        <br><br>
-                        <div class="question">
-                            So, you might ask, “What is a better way of framing?”
-                        </div>
-                        <br>
-                    </ul>
-                    <ul>
-                        <b id="LengthScroll">Length-based framing:</b>
-                        <br>
-                        Well, we have length-based framing. Instead of a fixed length, every frame declares how long it is. But it's still not the most ideal way because you have to make sure the receivers read the length field correctly, and it also means the receivers have to identify the beginning.
-                        <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/length_based.png" alt="" id="frame">
-                        </div>
-                    <br>
-                    </ul>
-                    <br>
-                    So, it brings us to another alternative: <strong>Flags or Sentinels.</strong>
-                    <br><br>
-                    <ul>
-                        <b id="FlagsScroll">Flags (Sentinels)</b>
-                        <br>
-                        The basic concept of flags is to use something recognizable to identify the start and the end of a frame.
-                        One type of indicator is a special bit or byte pattern in the header or trailer. 
-                        However, it does have disadvantages. For example, special bit or byte patterns can sometimes overlap with the bits in the data, which makes the frame start later or end earlier. But there is a solution to this problem.
-                        <br><br>
-                    </ul>
-                    <ul>
-                        <b id="StuffingScroll">Stuffing:</b>
-                        <br>
-                        This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually, the bit pattern of flags (<strong>bit stuffing</strong>) would be <strong>01111110 (0x7E)</strong>.
-<!--                        , and it is designed for <strong>High-Level Data Link Control (HDLC) and Synchronous Data Link Control (SDLC).</strong>-->
-                        <br><br>
-                        <div class="question">So, where do we insert the bits?</div>
-                        <br>
-                        Whenever the senders see <strong>5 ones</strong> beside each other, it would add 1 zero beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. In other words, <strong>01111111 (0x7F)</strong> would be unacceptable in a data stream.
-                        <div class="piccontainer">
-                                <img src="http://loophole.studio/images/osi_model/datalink/bitstuff.png" alt="" id="bitstuff">
-                        </div>
-                        <br>
-                        Let’s now do some math. If we use 01110 as a flag meaning that we have to insert 1 zero every 2 ones. In other words, if we use <strong>01*n0</strong> we have to insert 1 zero every <strong>n-1</strong> ones. When the payload is long, we should use a long flag, and when the payload is short, we should use a short flag.
-                        <br><br>
-                        Let’s now put it in the scale of <strong>bytes.</strong> (just in case you forget. <strong>1 byte = 8 bits</strong>)
-                        It is generally similar to bit stuffing, but there are two different flags: <strong>STX and ETX.</strong> One at the very beginning, and one at the very end. To prevent these two flags to appear in the payload, there is another character known as <strong>DLE (data-link escape)</strong> to avoid this problem. 
-                        <div class="piccontainer">
-                                <img src="http://loophole.studio/images/osi_model/datalink/bytestuffing.png" alt="" id="bitstuff">
-                        </div>
-                        However, things can get really bad when DLE accidentally appears in the payload. We also have another type of byte stuffing known as the <strong>Consistent-Overhead Byte Stuffing.</strong>
-                        <br><br>
                         <ul>
+                            <b id="FixedScroll">Fixed length (bits) framing:</b>
+                            <br>
+                            In this type of framing, the receivers are easier to understand and process the frames. However, it is inefficient when you are dealing with small payloads. Moreover, it will also be inconvenient to handle big payloads because you have to break them down making them fragmented.
+                            <br><br>
+                        </ul>
+                        <ul>
+                            <b id="LengthScroll">Length-based framing:</b>
+                            <br>
+                            Instead of a fixed length, every frame declares how long it is. But it's still not the most ideal way because you have to make sure the receivers read the length field correctly, and it also means the receivers have to identify the beginning.
+                            <div class="piccontainer">
+                                <img src="http://loophole.studio/images/osi_model/datalink/length_based.png" alt="" id="frame">
+                            </div>
+                        <br>
+                        </ul>
+                        <ul>
+                            <b id="FlagsScroll">Flags (Sentinels)</b>
+                            <br>
+                            The basic concept of flags is to use something recognizable to identify the start and the end of a frame.
+                            One type of indicator is a special bit or byte pattern in the header or trailer. 
+                            However, it does have disadvantages. For example, special bit or byte patterns can sometimes overlap with the bits in the data, which makes the frame start later or end earlier. But there is a solution to this problem.
+                            <br><br>
+                        </ul>
+                        <ul>
+                            <b id="StuffingScroll">Stuffing:</b>
+                            <br>
+                            This method inserts bits or bytes into data so that flags or sentinels won’t appear in the data stream. Usually, the bit pattern of flags (<strong>bit stuffing</strong>) would be <strong>01111110 (0x7E)</strong>.
+                            <br><br>
+                            Whenever the senders see <strong>5 ones</strong> beside each other, it would add 1 zero beside them since there are 6 ones in our sentinel (01111110). When the receivers are destuffing, it would remove 1 zero when they read 5 ones. If there is no zero to remove means two things: there is either a flag or an error. In other words, <strong>01111111 (0x7F)</strong> would be unacceptable in a data stream.
+                            <div class="piccontainer">
+                                    <img src="http://loophole.studio/images/osi_model/datalink/bitstuff.png" alt="" id="bitstuff">
+                            </div>
+                            <br>
+                            Let’s now do some math. If we use 01110 as a flag meaning that we have to insert 1 zero every 2 ones. In other words, if we use <strong>01*n0</strong> we have to insert 1 zero every <strong>n-1</strong> ones. When the payload is long, we should use a long flag, and when the payload is short, we should use a short flag.
+                            <br><br>
+                            Let’s now put it in the scale of <strong>bytes.</strong> (just in case you forget. <strong>1 byte = 8 bits</strong>)
+                            It is generally similar to bit stuffing, but there are two different flags: <strong>STX and ETX.</strong> One at the very beginning, and one at the very end. To prevent these two flags to appear in the payload, there is another character known as <strong>DLE (data-link escape)</strong> to avoid this problem. 
+                            <div class="piccontainer">
+                                    <img src="http://loophole.studio/images/osi_model/datalink/bytestuffing.png" alt="" id="bitstuff">
+                            </div>
+                            However, things can get really bad when DLE accidentally appears in the payload. We also have another type of byte stuffing known as the <strong>Consistent-Overhead Byte Stuffing.</strong>
+                            <br><br>
                             <b id="ConsistentScroll">Consistent-Overhead Byte Stuffing: </b>
                             <br>
                             It uses <strong>0x00</strong> as a flag. It might be easier to demonstrate with a picture, so let’s look at the picture bellow.
@@ -271,13 +260,13 @@
                             As you can see, each 00 is changed into the distance to the next 00. The max distance is <strong>254.</strong> If there is no 00 in the distance of 254 it will be represented by <strong>255 (0xFF).</strong>
                             <br><br>
                             Although the methods above might sound perfect to you, they still contain problems such as the existence of missed flags and spurious flags. So, some genius came up with the idea of using time instead.
+                            <br><br>
+                            <b>Clock-Based Framing:</b>
+                            <br>
+                            By using an external clock, it does not need any bit to show the length of the data stream but has to rely on precise <strong>clock synchronization</strong> between the receivers and the senders. Another framing that relies on an external clock is <strong>SONET (Synchronous Optical NETwork),</strong> but I decide not to introduce it for now. If you are interested, I strongly recommend you do some research.
+                            <br>
+                            <br>
                         </ul>
-                        <br>
-                        <b>Clock-Based Framing:</b>
-                        <br>
-                        By using an external clock, it does not need any bit to show the length of the data stream but has to rely on precise <strong>clock synchronization</strong> between the receivers and the senders. Another framing that relies on an external clock is <strong>SONET (Synchronous Optical NETwork),</strong> but I decide not to introduce it for now. If you are interested, I strongly recommend you do some research.
-                        <br>
-                        <br>
                     </ul>
                     <b>Addressing:</b>
                     <br>
@@ -285,31 +274,33 @@
                     <br>
                     <br>
                     <ul>
-                        <b>Address Resolution Protocol (ARP): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
-                        <br>
-                        The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
-                        There are two types of ARP message:
-                        <ol>
-                            <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
-                            <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
-                        </ol>
-                        <br>
-                        <div class="question">
-                            So are you saying that it will run ARP every time whenever my computer tries to find a device's MAC address?”
-                        </div>
-                        <br>
-                        No, actually. It will be a waste of time to run ARP when your computer has already communicated to the target device. In fact, there is a <strong>cache</strong> storing the MAC address a computer knows. If you want to check that out in your computer open your terminal and simply type:
-                        <br>
-                        <div class="command">
-                            arp -a
-                        </div>
-                        <div class="piccontainer">
-                            <img src="http://loophole.studio/images/osi_model/datalink/arp.png" alt="" id="arp" alt="">
-                        </div>
-                        <br>
-                        <strong>ARP cache</strong> has a specific size meaning that it will be a waste of space if your computer stores address that are no longer used. Therefore, ARP cache is periodically <strong>flushed</strong> meaning that it will go through all the addresses and delete those that are seldom used.
+                        <ul>
+                            <b>Address Resolution Protocol (ARP): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
+                            <br>
+                            The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
+                            <b>Two types of ARP message:</b>
+                            <ol>
+                                <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
+                                <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
+                            </ol>
+                            <br>
+                            <div class="question">
+                                So are you saying that it will run ARP every time whenever my computer tries to find a device's MAC address?”
+                            </div>
+                            <br>
+                            No, actually. It will be a waste of time to run ARP when your computer has already communicated to the target device. In fact, there is a <strong>cache</strong> storing the MAC address a computer knows. If you want to check that out in your computer open your terminal and simply type:
+                            <br>
+                            <div class="command">
+                                arp -a
+                            </div>
+                            <div class="piccontainer">
+                                <img src="http://loophole.studio/images/osi_model/datalink/arp.png" alt="" id="arp" alt="">
+                            </div>
+                            <br>
+                            <strong>ARP cache</strong> has a specific size meaning that it will be a waste of space if your computer stores address that are no longer used. Therefore, ARP cache is periodically <strong>flushed</strong> meaning that it will go through all the addresses and delete those that are seldom used.
 
-                        <br>
+                            <br>
+                        </ul>
                     </ul>
                     <br>
                     <b>Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>

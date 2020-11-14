@@ -18,6 +18,10 @@
     }
 }
 
+.title_big{
+    font-size: 45px
+}
+
 .homework{
     background-color: #62b2de;
     padding: 10px;
@@ -26,7 +30,7 @@
 
 .question{
     font-family: 'exo';
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .intro_box{
