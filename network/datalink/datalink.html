@@ -261,84 +261,81 @@
                             <br>
                         </li>
                     </ul>
-                    <b>Addressing:</b>
+                    <b>2. Addressing:</b>
                     <br>
                     Data-link layer utilizes hardware addressing mechanism to give different devices unique <strong>hardware addresses.</strong> This might sound familiar because we have talked about it. And if you pay enough attention you will notice that I'm now talking about <strong>MAC addresses (hardware address).</strong> But how does one computer discover another computer’s <strong>layer 2 address?</strong> The answer to this question is quite simple: it is a method known as <strong>ARP (Address Resolution Protocol).</strong>
-                    <br>
-                    <br>
+
                     <ul>
-                        <ul>
+                        <li>
                             <b>Address Resolution Protocol (ARP): </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[9]</a>
                             <br>
                             The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
+                        </li>
+                        <li>
                             <b>Two types of ARP message:</b>
-                            <ul>
                                 <ol>
                                     <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
                                     <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
                                 </ol>
-                            </ul>
-                            <br>
-                            <div class="question">
-                                So are you saying that it will run ARP every time whenever my computer tries to find a device's MAC address?”
-                            </div>
-                            <br>
-                            No, actually. It will be a waste of time to run ARP when your computer has already communicated to the target device. In fact, there is a <strong>cache</strong> storing the MAC address a computer knows. If you want to check that out in your computer open your terminal and simply type:
-                            <br>
-                            <div class="command">
-                                arp -a
-                            </div>
-                            <div class="piccontainer">
-                                <img src="http://loophole.studio/images/osi_model/datalink/arp.png" alt="" id="arp" alt="">
-                            </div>
-                            <br>
-                            <strong>ARP cache</strong> has a specific size meaning that it will be a waste of space if your computer stores address that are no longer used. Therefore, ARP cache is periodically <strong>flushed</strong> meaning that it will go through all the addresses and delete those that are seldom used.
-
-                            <br>
-                        </ul>
+                        </li>
                     </ul>
                     <br>
-                    <b>Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
+                    <div class="question">
+                        So are you saying that it will run ARP every time whenever my computer tries to find a device's MAC address?”
+                    </div>
+                    <br>
+                    No, actually. It will be a waste of time to run ARP when your computer has already communicated to the target device. In fact, there is a <strong>cache</strong> storing the MAC address a computer knows. If you want to check that out in your computer open your terminal and simply type:
+                    <br>
+                    <div class="command">
+                        arp -a
+                    </div>
+                    <div class="piccontainer">
+                        <img src="http://loophole.studio/images/osi_model/datalink/arp.png" alt="" id="arp" alt="">
+                    </div>
+                    <br>
+                    <strong>ARP cache</strong> has a specific size meaning that it will be a waste of space if your computer stores address that are no longer used. Therefore, ARP cache is periodically <strong>flushed</strong> meaning that it will go through all the addresses and delete those that are seldom used.
+
+                    <br>
+
+                    <br>
+                    <b>3. Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
                     <br>
                     Frame Synchronization is a task performed by MAC sublayer. It functions to keep the receiver and sender at the same pace. This is also known as <strong>Flow control.</strong> Here are two types of flow control mechanisms: <strong>Stop and Wait and Sliding Window.</strong>
                     <br><br>
                     <ul>
+                    <li>
+                        <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a>
+                        <br>
+                        The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
+                        <br>
+                        <b>pros:</b>
                         <ul>
-                            <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a><br>
-                            The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
-                            <br><br>
-                            <b>pros:</b>
-                            <ul>
-                                <li>it is simple to implement</li>
-                            </ul>
-                            <br>
-                            <b>cons:</b>
-                            <ul>
-                                <li>it slows down the transmission process</li>
-                                <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
-                                <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
-                            </ul>
-                            <div class="piccontainer">
-                                <img src="http://loophole.studio/images/osi_model/datalink/stopwait.png" alt="" id="pic_400" alt="">
-                            </div>
-
-                            <br>
-                            <b>Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
-                            <br>
-                            Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
+                            <li>it is simple to implement</li>
                         </ul>
-                    </ul>
+                        <b>cons:</b>
+                        <ul>
+                            <li>it slows down the transmission process</li>
+                            <li>it is inefficient because part of the bandwidth is distributed to the acknowledgment the receiver sent</li>
+                            <li>if data packets are lost during the transmission process, both the receiver and the sender will start waiting for an infinite time.</li>
+                        </ul>
+                        <div class="piccontainer">
+                            <img src="http://loophole.studio/images/osi_model/datalink/stopwait.png" alt="" id="pic_400" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <b>Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
+                        <br>
+                        Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
+                    </li>
+                </ul>
+                        
                     <br><br>
-                    <b>Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
+                    <b>4. Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
                     <br>
                     During transmission of data, noise, cross-talk, and many other factors might cause data to be incorrectly sent to the receivers. To solve this problem, there are multiple methods to ensure the transmission is accurate enough. Let's first look at a few types of errors before getting into those methods.
                     <ul>
                         <li><strong>Single bits error:</strong> only one bit is opposite to the original one.</li>
-                    </ul>
-                    <ul>
                         <li><strong>Multiple bits error:</strong> more than one bit is opposite to the original one.</li>
-                    </ul>
-                    <ul>
                         <li><strong>Burst error:</strong> a series of bits are corrupted</li>
                     </ul>
                     <br>
