@@ -71,8 +71,9 @@
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="AddressScroll()">Addressing</a></li>
                         <ul>
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ARPScroll()">Address Resolution Protocol (ARP)</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ARPtypesScroll()">Types of ARP messenges</a></li>
                         </ul>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Synchronization</a></li>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="SyncScroll()">Frame Synchronization</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Error control</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Flow control</a></li>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Multi-Access</a></li>
@@ -281,7 +282,7 @@
                             The term “Address Resolution” means the process of finding an address of a computer in a network.<a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[10]</a> The basic concept of ARP is to find <strong>MAC addresses</strong> through IP addresses (specifically <strong>IPv4,</strong> we will talk about IP addresses when we reach <strong>network layer</strong>). So, what exactly a computer does is that it will send out a <strong>broadcast</strong> asking which device owns the IP address, for example, 10.0.0.1 and what is its MAC address. The computer will also provide its IP address and MAC address so that the device they are looking for can reply. When the target device heard someone calling its IP address they will respond and provide its MAC address, for example, 00:0a:86:9d:78:17. I know it may sound a bit abstract so I will perform the whole process of ARP in my video. <br><br>
                         </li>
                         <li>
-                            <b>Two types of ARP message:</b>
+                            <b id="ARPtypesScroll">Two types of ARP message:</b>
                                 <ol>
                                     <li><strong>ARP-Request</strong> (send with <strong>Broadcast,</strong> source IP address of the requester)</li>
                                     <li><strong>ARP-Reply</strong> (send with <strong>Unicast</strong> to requester, the target)</li>
@@ -307,7 +308,7 @@
                     <br>
 
                     <br>
-                    <b>3. Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
+                    <b id="SyncScroll">3. Frame Synchronization </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[11]</a>
                     <br>
                     Frame Synchronization is a task performed by MAC sublayer. It functions to keep the receiver and sender at the same pace. This is also known as <strong>Flow control.</strong> Here are two types of flow control mechanisms: <strong>Stop and Wait and Sliding Window.</strong>
                     <br><br>

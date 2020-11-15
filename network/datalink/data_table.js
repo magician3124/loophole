@@ -74,6 +74,10 @@ function ConsistentScroll(){
         window.scrollTo(0, document.getElementById('ConsistentScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
 }
 
+function ARPtypesScroll(){
+        window.scrollTo(0, document.getElementById('ARPtypesScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
+
 function ClockScroll(){
         window.scrollTo(0, document.getElementById('ClockScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
 }
@@ -85,6 +89,12 @@ function AddressScroll(){
 function ARPScroll(){
         window.scrollTo(0, document.getElementById('ARPScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
 }
+
+function SyncScroll(){
+        window.scrollTo(0, document.getElementById('SyncScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
+
+
 
 function cite(){
         window.scrollTo(0, document.getElementById('refer').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
