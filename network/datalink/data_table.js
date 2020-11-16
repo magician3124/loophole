@@ -94,7 +94,25 @@ function SyncScroll(){
         window.scrollTo(0, document.getElementById('SyncScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
 }
 
+function ErrorScroll(){
+        window.scrollTo(0, document.getElementById('ErrorScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
 
+function StopScroll(){
+        window.scrollTo(0, document.getElementById('StopScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
+
+function SlideScroll(){
+        window.scrollTo(0, document.getElementById('SlideScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
+
+function ParityScroll(){
+        window.scrollTo(0, document.getElementById('ParityScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
+
+function CRCScroll(){
+        window.scrollTo(0, document.getElementById('CRCScroll').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);
+}
 
 function cite(){
         window.scrollTo(0, document.getElementById('refer').offsetTop - (document.getElementsByClassName('FixedElement')[0].offsetHeight)-20);

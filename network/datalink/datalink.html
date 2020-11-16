@@ -74,9 +74,15 @@
                             <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ARPtypesScroll()">Types of ARP messenges</a></li>
                         </ul>
                         <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="SyncScroll()">Frame Synchronization</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Error control</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Flow control</a></li>
-                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ConsistentScroll()">Multi-Access</a></li>
+                        <ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="StopScroll()">Stop and Wait</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="SlideScroll()">Sliding Window</a></li>
+                        </ul>
+                        <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ErrorScroll()">Error control</a></li>
+                        <ul>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="ParityScroll()">Parity Check</a></li>
+                            <li><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false;" onmousedown="CRCScroll()">Cyclic Redundancy Check (CRC)</a></li>
+                        </ul>
                     </ol>
                 </ul>
                     <ol>
@@ -314,7 +320,7 @@
                     <br><br>
                     <ul>
                     <li>
-                        <b>Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a>
+                        <b id="StopScroll">Stop and Wait: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[12]</a>
                         <br>
                         The basic concept of <Strong> Stop and Wait</Strong> is that when the receiver receives the data packets from the sender, it will first process the packets and then send an <strong>acknowledgment</strong> back to the sender to tell him that he is ready to receive the next data packet.
                         <br>
@@ -333,14 +339,14 @@
                         </div>
                     </li>
                     <li>
-                        <b>Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
+                        <b id="SlideScroll">Sliding Window: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[14]</a>
                         <br>
                         Instead of sending acknowledgment after every single frame, the receivers and senders agree on the number of data frames after which the acknowledgment should be sent. By doing so, it wastes fewer resources compare to Stop and Wait flow control mechanism.
                     </li>
                 </ul>
                         
                     <br><br>
-                    <b>4. Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
+                    <b id="ErrorScroll">4. Error control: </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[1]</a>
                     <br>
                     During transmission of data, noise, cross-talk, and many other factors might cause data to be incorrectly sent to the receivers. To solve this problem, there are multiple methods to ensure the transmission is accurate enough. Let's first look at a few types of errors before getting into those methods.
                     <ul>
@@ -351,7 +357,7 @@
                     <br>
                     <b>How to detect errors? </b><a href="http://loophole.studio/subwebsite/network/osimodel.html" onclick="return false" onmousedown="cite()">[13]</a>
                     <br>
-                    <b>Parity Check:</b>
+                    <b id="ParityScroll">Parity Check:</b>
                     <ul>
                         <li><strong>Even parity:</strong> If the original data is 100101, which means there is an odd amount of "1" (“1” * 3) a “1” is added to the right side of the data, making it 1001011. The reason of doing so is to ensure there is an even amount of “1” in the data. If there is already an even amount of “1” in the data, then a “0” is added at the end of the data.</li>
                     </ul>
@@ -365,7 +371,7 @@
                     </div>
                     Before the transmission is even started, the receiver and the sender will first agree on the same type of parity, either even or odd. And when the data is sent, the receiver can simply determine whether error exists by counting the number of “1.” If they are using even parity and the number of “1” is odd, then clearly that part of the data is corrupted, and vice versa. However, the fatal flaw of this method is that if multiple bits error, it is hard to determine whether the data is corrupted or not.
                     <br><br>
-                    <b>Cyclic Redundancy Check (CRC)</b>
+                    <b id="CRCScroll">Cyclic Redundancy Check (CRC)</b>
                     <br>
                     Before the data is sent, the original data bits are divided with the divisor. Then, the remainder of the division is added to the end of the data. So, the receiver can simply divide the new data with the same divisor. If the remainder is zero, meaning that no errors occur.
                     <div class="piccontainer">
